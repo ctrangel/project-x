@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project-x</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles1.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/styles2.css" />
+    <!-- <script src="script.js"></script> -->
+  </head>
+
+  <body>
+    <div id="header-container">
+      <header id="header">Project-x</header>
+    </div>
+    <div id="sideBar">
+      <div id="logoDiv">
+        <img src="../Media/icons/logo.svg" id="logoImg" alt="logo" />
+      </div>
+      <nav>
+        <ul id="sideBar-ul">
+          <li class="tabs">
+            <a class="tab-link" href="index.html">
+              <img src="../Media/icons/home-icon.png" class="icons" />Home
+            </a>
+          </li>
+          <li class="tabs">
+            <a class="tab-link" href="playlist.html">
+              <img src="../Media/icons/headphones.png" class="icons" />Playlist
+            </a>
+          </li>
+          <li class="tabs">
+            <a class="tab-link" href="music.html">
+              <img src="../Media/icons/music-note.png" class="icons" />Music
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="menu-icon-container">
+      <img src="../Media/icons/menu-icon.png" id="menu-icon" onclick="toggleSidebar()" />
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Label -->
+    <div id="form">
+      <form id="playlistForm" onsubmit="return false">
+        <label for="name">Name:</label>
+        <input type="text" class="input" id="name" name="name" />
+        <br /><br />
+        <label for="artist">Artist:</label>
+        <input type="text" class="input" id="artist" name="artist" />
+        <br /><br />
+        <label for="song">Song:</label>
+        <input type="text" class="input" id="song" name="song" />
+        <br /><br />
+        <button id="submit">Submit</button>
+      </form>
+    </div>
+    <table id="display">
+      <tr>
+        <th>Name</th>
+        <th>Artist</th>
+        <th>Song</th>
+      </tr>
+    </table>
+    <script src="../scripts/script.js"></script>
+  </body>
+</html>
