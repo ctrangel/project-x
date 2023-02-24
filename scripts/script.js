@@ -38,3 +38,5 @@ function displayDetails() {
 
   // console.log(row);
 }
+
+
