@@ -40,3 +40,7 @@ function displayDetails() {
 }
 
 
+function scrolley() {
+  let bckSize = document.getElementsByTagName("body").style.backgroundSize;
+  console.log(bckSize);
+}

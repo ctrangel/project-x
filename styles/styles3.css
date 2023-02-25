@@ -1,1 +1,80 @@
 /* styles sheet for music.html */
+body {
+    background-image: url("../media/photos/img9.jpg");
+    
+    color: pink;
+    background-size: cover;
+  width: 100vw;
+  height: 100vw;
+  border: 2px solid;
+}
+
+/* #container-frosty {
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid;
+  border-radius: 10px;
+  backdrop-filter: saturate(180%) blur(10px);
+  text-decoration: none;
+ 
+} */
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  #genre-list {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
+#genre-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid;
+  border-radius: 10px;
+  backdrop-filter: saturate(180%) blur(10px);
+  text-decoration: none;
+
+}
+.genre-list {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px; */
+  background-color: #d9a282;
+  padding: 10px;
+  margin: 20px; 
+  border: 2px solid pink;
+  border-radius: 10px;
+  text-decoration: none;  
+  list-style: none;
+  
+}
+.genre-list:hover {
+  background-color: pink;
+  color: pink;
+  text-decoration: none;
+}
+
+.genre-txt {
+  color: white;
+  text-decoration: none;
+
+}
+#music-header-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  backdrop-filter: saturate(180%) blur(10px);
+  border: solid pink;
+  border-radius: 10px;
+}
+
