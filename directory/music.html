@@ -19,54 +19,24 @@
           <h1 id="music-header">Music Files</h1>
         </div>
         <ul id="genre-list">
-          <li class="genre-list">
-            <a class="genre-txt" href="rock.html">Rock</a>
-          </li>
-          <li class="genre-list">
-            <a class="genre-txt" href="pop.html">Pop</a>
-          </li>
-          <li class="genre-list">
-            <a class="genre-txt" href="hip-hop.html">Hip-Hop</a>
-          </li>
-          <li class="genre-list">
-            <a class="genre-txt" href="jazz.html">Jazz</a>
-          </li>
-          <li class="genre-list">
-            <a class="genre-txt" href="classical.html">Classical</a>
-          </li>
-          <li class="genre-list">
-            <a class="genre-txt" href="country.html">Country</a>
-          </li>
-          <li class="genre-list">
-            <a class="genre-txt" href="metal.html">Metal</a>
-          </li>
-          <li class="genre-list">
-            <a class="genre-txt" href="blues.html">Blues</a>
-          </li>
-          <li class="genre-list">
-            <a class="genre-txt" href="reggae.html">Reggae</a>
-          </li>
-          <li class="genre-list">
-            <a class="genre-txt" href="soul.html">Soul</a>
-          </li>
-          <li class="genre-list">
-            <a class="genre-txt" href="funk.html">Funk</a>
-          </li>
-          <li class="genre-list">
-            <a class="genre-txt" href="disco.html">Disco</a>
-          </li>
-          <li class="genre-list">
-            <a class="genre-txt" href="spongecore.html">Spongecore</a>
-          </li>
-          <li class="genre-list">
-            <a class="genre-txt" href="DnB.html">DnB</a>
-          </li>
-          <li class="genre-list">
-            <a class="genre-txt" href="trance.html">Funk MTG</a>
-          </li>
-
+          <button type="button" id="rock-btn" class="genre-list" onclick="playRockSong()">Rock</button>
+          <button type="button" id="pop-btn" class="genre-list" onclick="playPopSong()">Pop</button>
+          <button type="button" id="hip-hop-btn" class="genre-list" onclick="playHipHopSong()">Hip-Hop</button>
+          <button type="button" id="jazz-btn" class="genre-list" onclick="playJazzSong()">Jazz</button>
+          <button type="button" id="classical-btn" class="genre-list" onclick="playClassicalSong()">Classical</button>
+          <button type="button" id="country-btn" class="genre-list" onclick="playCountrySong()">Country</button>
+          <button type="button" id="metal-btn" class="genre-list" onclick="playMetalSong()">Metal</button>
+          <button type="button" id="rnb-btn" class="genre-list" onclick="playRnBSong()">RnB</button>
+          <button type="button" id="reggae-btn" class="genre-list" onclick="playReggaeSong()">Reggae</button>
+          <button type="button" id="soul-btn" class="genre-list" onclick="playSoulSong()">Soul</button>
+          <button type="button" id="funk-btn" class="genre-list" onclick="playFunkSong()">Funk</button>
+          <button type="button" id="disco-btn" class="genre-list" onclick="playDiscoSong()">Disco</button>
+          <button type="button" id="spongecore-btn" class="genre-list" onclick="playSpongecoreSong()">Spongecore</button>
+          <button type="button" id="dnb-btn" class="genre-list" onclick="playDnbSong()">DnB</button>
+          <button type="button" id="funkmtg-btn" class="genre-list" onclick="playFunkmtgSong()">Funk MTG</button>
         </ul>
       </div>
+      <p id="song-name"></p>
       <div id="sideBar">
         <div id="logoDiv">
           <img src="../Media/icons/logo.svg" id="logoImg" alt="logo" />

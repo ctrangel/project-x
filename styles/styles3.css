@@ -53,12 +53,15 @@ body {
   border-radius: 10px;
   text-decoration: none;  
   list-style: none;
+  color: white;
+  font-size: 20px;
   
 }
 .genre-list:hover {
   background-color: pink;
-  color: pink;
+  color: black;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .genre-txt {
