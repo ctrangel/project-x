@@ -47,6 +47,7 @@ function playRockSong() {
     "../media/sound/songs/rock/come_together_Beatles.wav",
     "../media/sound/songs/rock/dear_maria_count_me_in_All_Tim.wav",
     "../media/sound/songs/rock/simple_man_lynard_skynard.wav",
+    "../media/sound/songs/rock/some_version_of_Black_Betty-Ram_Jam.mp3"
   ];
 
   let button = document.getElementById("rock-btn");
