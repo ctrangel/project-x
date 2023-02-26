@@ -83,7 +83,8 @@ function playPopSong() {
   let randomArray = [
     "../media/sound/songs/pop/you_rock_my_world-michael_jackson.wav",
     "../media/sound/songs/pop/big_girls_don't_cry-Fergie.wav",
-    "../media/sound/songs/pop/bad_guy-Billie_Eilish.mp3"
+    "../media/sound/songs/pop/bad_guy-Billie_Eilish.mp3",
+    "../media/sound/songs/pop/Mariah_Carey-Obsessed(sped_up_a_lil).mp3"
   ];
 
   let button = document.getElementById("pop-btn");
@@ -150,4 +151,8 @@ function playHipHopSong() {
   });
   
 }
-// TODO: add rest of buttons and add css class function to make cool border animation when song is playing
+/* TODO: add rest of buttons and add css class function to make cool border animation when song is playing
+         add js function to better display song names instead of the path names
+*/
+
+      
