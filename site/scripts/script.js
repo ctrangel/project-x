@@ -110,4 +110,41 @@ function playPopSong() {
   });
 }
 
+// play hip hop song button function
 
+var hiphopAudio;
+function playHipHopSong() {
+  let randomArray = [
+    "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+    "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+    "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+    "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+    "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+    
+
+  ];
+
+  let button = document.getElementById("hip-hop-btn");
+
+  if (!hiphopAudio) {
+    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    hiphopAudio = new Audio();
+    hiphopAudio.src = randomSong;
+  }
+
+  if (hiphopAudio.paused) {
+    hiphopAudio.play();
+    button.innerHTML = "II";
+  } else {
+    hiphopAudio.pause();
+    button.innerHTML = "Pop";
+  }
+  //display current song file below
+  let songNameElement = document.getElementById("song-name");
+
+  hiphopAudio.addEventListener("play", function () {
+    let songName = hiphopAudio.src.split("/").pop();
+    songNameElement.textContent = songName;
+  });
+}
+// TODO: add rest of buttons and add css class function to make cool border animation when song is playing
