@@ -71,7 +71,7 @@ function playRockSong() {
   let songNameElement = document.getElementById("song-name");
 
   rockAudio.addEventListener("play", function () {
-    let songName = rockAudio.src.split("/").pop();
+    let songName = rockAudio.src.slice(0, -4).split("/").pop();
     songNameElement.textContent = songName;
   });
 }
@@ -81,8 +81,9 @@ function playRockSong() {
 var popAudio;
 function playPopSong() {
   let randomArray = [
-    "../media/sound/songs/pop/yourockmyworld-michaeljackson.wav",
-    "../media/sound/songs/pop/big_girls_don't_cry_Fergie.wav",
+    "../media/sound/songs/pop/you_rock_my_world-michael_jackson.wav",
+    "../media/sound/songs/pop/big_girls_don't_cry-Fergie.wav",
+    "../media/sound/songs/pop/bad_guy-Billie_Eilish.mp3"
   ];
 
   let button = document.getElementById("pop-btn");
@@ -106,7 +107,7 @@ function playPopSong() {
   let songNameElement = document.getElementById("song-name");
 
   popAudio.addEventListener("play", function () {
-    let songName = popAudio.src.split("/").pop();
+    let songName = popAudio.src.slice(0, -4).split("/").pop();
     songNameElement.textContent = songName;
   });
 }
@@ -144,7 +145,7 @@ function playHipHopSong() {
   let songNameElement = document.getElementById("song-name");
 
   hiphopAudio.addEventListener("play", function () {
-    let songName = hiphopAudio.src.split("/").pop();
+    let songName = hiphopAudio.src.slice(0, -4).split("/").pop();
     songNameElement.textContent = songName;
   });
   
