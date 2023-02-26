@@ -146,5 +146,6 @@ function playHipHopSong() {
     let songName = hiphopAudio.src.split("/").pop();
     songNameElement.textContent = songName;
   });
+  
 }
 // TODO: add rest of buttons and add css class function to make cool border animation when song is playing
