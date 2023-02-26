@@ -61,7 +61,7 @@ function playRockSong() {
 
   if (rockAudio.paused) {
     rockAudio.play();
-    button.innerHTML = "Pause";
+    button.innerHTML = "II";
   } else {
     rockAudio.pause();
     button.innerHTML = "Rock";
@@ -96,7 +96,7 @@ function playPopSong() {
 
   if (popAudio.paused) {
     popAudio.play();
-    button.innerHTML = "Pause";
+    button.innerHTML = "II";
   } else {
     popAudio.pause();
     button.innerHTML = "Pop";
