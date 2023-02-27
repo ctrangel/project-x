@@ -140,7 +140,7 @@ function playHipHopSong() {
     button.innerHTML = "II";
   } else {
     hiphopAudio.pause();
-    button.innerHTML = "Pop";
+    button.innerHTML = "Hip-Hop"; // btn label bug was here fixed it
   }
   //display current song file below
   let songNameElement = document.getElementById("song-name");
