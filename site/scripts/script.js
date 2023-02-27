@@ -74,7 +74,7 @@ function playRockSong() {
     let songName = rockAudio.src.slice(0, -4).split("/").pop();
     songNameElement.textContent = songName;
   });
-
+// on play , changes background to moving gradient
   rockAudio.addEventListener("play", function changeBackground() {
     let bckGround = document.getElementById("genre-list");
     bckGround.className = "on-play";
