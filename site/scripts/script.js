@@ -74,6 +74,16 @@ function playRockSong() {
     let songName = rockAudio.src.slice(0, -4).split("/").pop();
     songNameElement.textContent = songName;
   });
+
+  rockAudio.addEventListener("play", function changeBackground() {
+    let bckGround = document.getElementById("genre-list");
+    bckGround.className = "on-play";
+  });
+
+  rockAudio.addEventListener("pause", function revertBackground() {
+    let originalBckGround = document.getElementById("genre-list");
+    originalBckGround.classList.remove("on-play"); 
+  });
 }
 
 // Play pop song button function
@@ -110,6 +120,16 @@ function playPopSong() {
   popAudio.addEventListener("play", function () {
     let songName = popAudio.src.slice(0, -4).split("/").pop();
     songNameElement.textContent = songName;
+  });
+
+  popAudio.addEventListener("play", function changeBackground() {
+    let bckGround = document.getElementById("genre-list");
+    bckGround.className = "on-play";
+  });
+
+  popAudio.addEventListener("pause", function revertBackground() {
+    let originalBckGround = document.getElementById("genre-list");
+    originalBckGround.classList.remove("on-play"); 
   });
 }
 
@@ -149,10 +169,21 @@ function playHipHopSong() {
     let songName = hiphopAudio.src.slice(0, -4).split("/").pop();
     songNameElement.textContent = songName;
   });
+
+  hiphopAudio.addEventListener("play", function changeBackground() {
+    let bckGround = document.getElementById("genre-list");
+    bckGround.className = "on-play";
+  });
+
+  hiphopAudio.addEventListener("pause", function revertBackground() {
+    let originalBckGround = document.getElementById("genre-list");
+    originalBckGround.classList.remove("on-play"); // learned a new method here 
+    // I am enamored, somehow this actually worked first time trying it.
+  });
   
 }
 /* TODO: add rest of buttons and add css class function to make cool border animation when song is playing
          add js function to better display song names instead of the path names
 */
 
-      
+
