@@ -40,6 +40,7 @@ function displayDetails() {
 }
 
 // Play rock song button function
+// TODO: get rid of the random array thing, just figure out how to just cycle through the array
 
 var rockAudio;
 function playRockSong() {
