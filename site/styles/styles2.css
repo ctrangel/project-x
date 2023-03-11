@@ -96,8 +96,6 @@ td {
   margin: 2px;
   padding: 5px;
   transition: font-size 0.2s ease-in-out;
-  /* TODO: add solid border with a border width and border color around the inputs */
-
-
+  /* TODO: add solid border with a border width, border radius and border color around the inputs */
   
 }
