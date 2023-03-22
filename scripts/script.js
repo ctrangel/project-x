@@ -1,3 +1,5 @@
+//Nav bar script
+
 function toggleSidebar() {
   let sidebar = document.getElementById("sideBar");
   let menuIcon = document.getElementById("menu-icon");
@@ -35,9 +37,23 @@ function displayDetails() {
   cell3.innerHTML = song;
 
   row++;
-
-  // console.log(row);
 }
+  let input = document.getElementsByClassName("input").value;
+  let form = document.getElementById("form");
+  form.addEventListener("submit", function (event) { 
+    event.preventDefault();
+
+    let audio = new Audio("../media/sound/sfx/vine_boomst.wav");
+    console.log(input);
+    if (input === "") {
+      return false;
+    } else {
+    audio.play();
+    }
+
+
+  
+});
 
 // Play rock song button function
 // TODO: get rid of the random array thing, just figure out how to just cycle through the array
@@ -48,7 +64,7 @@ function playRockSong() {
     "../media/sound/songs/rock/come_together_Beatles.wav",
     "../media/sound/songs/rock/dear_maria_count_me_in_All_Tim.wav",
     "../media/sound/songs/rock/simple_man_lynard_skynard.wav",
-    "../media/sound/songs/rock/some_version_of_Black_Betty-Ram_Jam.mp3"
+    "../media/sound/songs/rock/some_version_of_Black_Betty-Ram_Jam.mp3",
   ];
 
   let button = document.getElementById("rock-btn");
@@ -75,7 +91,7 @@ function playRockSong() {
     let songName = rockAudio.src.slice(0, -4).split("/").pop();
     songNameElement.textContent = songName;
   });
-// on play , changes background to moving gradient
+  // on play , changes background to moving gradient
   rockAudio.addEventListener("play", function changeBackground() {
     let bckGround = document.getElementById("genre-list");
     bckGround.className = "on-play";
@@ -83,7 +99,7 @@ function playRockSong() {
 
   rockAudio.addEventListener("pause", function revertBackground() {
     let originalBckGround = document.getElementById("genre-list");
-    originalBckGround.classList.remove("on-play"); 
+    originalBckGround.classList.remove("on-play");
   });
 }
 
@@ -95,7 +111,7 @@ function playPopSong() {
     "../media/sound/songs/pop/you_rock_my_world-michael_jackson.wav",
     "../media/sound/songs/pop/big_girls_don't_cry-Fergie.wav",
     "../media/sound/songs/pop/bad_guy-Billie_Eilish.mp3",
-    "../media/sound/songs/pop/Mariah_Carey-Obsessed(sped_up_a_lil).mp3"
+    "../media/sound/songs/pop/Mariah_Carey-Obsessed(sped_up_a_lil).mp3",
   ];
 
   let button = document.getElementById("pop-btn");
@@ -130,7 +146,7 @@ function playPopSong() {
 
   popAudio.addEventListener("pause", function revertBackground() {
     let originalBckGround = document.getElementById("genre-list");
-    originalBckGround.classList.remove("on-play"); 
+    originalBckGround.classList.remove("on-play");
   });
 }
 
@@ -144,14 +160,13 @@ function playHipHopSong() {
     "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
     "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
     "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
-    
-
   ];
 
   let button = document.getElementById("hip-hop-btn");
 
   if (!hiphopAudio) {
-    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    let randomSong =
+      randomArray[Math.floor(Math.random() * randomArray.length)];
     hiphopAudio = new Audio();
     hiphopAudio.src = randomSong;
   }
@@ -178,13 +193,10 @@ function playHipHopSong() {
 
   hiphopAudio.addEventListener("pause", function revertBackground() {
     let originalBckGround = document.getElementById("genre-list");
-    originalBckGround.classList.remove("on-play"); // learned a new method here 
+    originalBckGround.classList.remove("on-play"); // learned a new method here
     // I am enamored, somehow this actually worked first time trying it.
   });
-  
 }
 /* TODO: add rest of buttons and add css class function to make cool border animation when song is playing
          add js function to better display song names instead of the path names
 */
-
-
