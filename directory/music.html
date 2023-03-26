@@ -1,92 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project-x</title>
-    <link rel="stylesheet" type="text/css" href="../styles/styles1.css" />
-    <link rel="stylesheet" type="text/css" href="../styles/styles3.css" />
-    <script src="../scripts/script.js"></script>
-  </head>
-  <body>
-    <div id="wrapper-body">
-      <div id="header-container">
-        <header id="header">Project-x</header>
-      </div>
-      <div id="container-frosty">
-        <div id="music-header-div">
-          <h1 id="music-header">Music Files</h1>
-          <button type="button" class="next-btn" onclick="location.reload()">Load new song 
-            <!-- lmao this doesn't really load anything it just refreshes the page, i'll try and work on something but this is fine for now, but if there's 3 or less songs in the array then it doesn't work everytime
-            I should probably just cycle through each song to the next instead of randomizing-->
-           
-          </button>
-        </div>
-          
-        <ul id="genre-list">
-          <button type="button" id="rock-btn" class="genre-list" onclick="playRockSong()">Rock</button>
-          <button type="button" id="pop-btn" class="genre-list" onclick="playPopSong()">Pop</button>
-          <button type="button" id="hip-hop-btn" class="genre-list" onclick="playHipHopSong()">Hip-Hop</button>
-          <button type="button" id="jazz-btn" class="genre-list" onclick="playJazzSong()">Jazz</button>
-          <button type="button" id="classical-btn" class="genre-list" onclick="playClassicalSong()">Classical</button>
-          <button type="button" id="country-btn" class="genre-list" onclick="playCountrySong()">Country</button>
-          <button type="button" id="metal-btn" class="genre-list" onclick="playMetalSong()">Metal</button>
-          <button type="button" id="rnb-btn" class="genre-list" onclick="playRnBSong()">RnB</button>
-          <button type="button" id="reggae-btn" class="genre-list" onclick="playReggaeSong()">Reggae</button>
-          <button type="button" id="soul-btn" class="genre-list" onclick="playSoulSong()">Soul</button>
-          <button type="button" id="funk-btn" class="genre-list" onclick="playFunkSong()">Funk</button>
-          <button type="button" id="disco-btn" class="genre-list" onclick="playDiscoSong()">Disco</button>
-          <button type="button" id="spongecore-btn" class="genre-list" onclick="playSpongecoreSong()">Spongecore</button>
-          <button type="button" id="dnb-btn" class="genre-list" onclick="playDnbSong()">DnB</button>
-          <button type="button" id="funkmtg-btn" class="genre-list" onclick="playFunkmtgSong()">Funk MTG</button>
-          <!-- might take the disco soul and funk buttons out not sure yet -->
-          <!-- IDEA: when clicked(or hovered) there should be a button that pops out the side of the list that has information about the genre -->
-        </ul>
-      </div>
-      <p id="song-name"></p>
-      <div id="sideBar">
-        <div id="logoDiv">
-          <img src="../Media/icons/logo.svg" id="logoImg" alt="logo" />
-        </div>
-        <nav>
-          <ul id="sideBar-ul">
-            <li class="tabs">
-              <a class="tab-link" href="home.html">
-                <img src="../Media/icons/home-icon.png" class="icons" />Home
-              </a>
-            </li>
-            <li class="tabs">
-              <a class="tab-link" href="playlist.html">
-                <img
-                  src="../Media/icons/headphones.png"
-                  class="icons"
-                />Playlist
-              </a>
-            </li>
-            <li class="tabs">
-              <a class="tab-link" href="music.html">
-                <img src="../Media/icons/music-note.png" class="icons" />Music
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div id="menu-icon-container">
-        <img
-          src="../Media/icons/menu-icon.png"
-          id="menu-icon"
-          onclick="toggleSidebar()"
-        />
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project-x</title>
+  <link rel="stylesheet" type="text/css" href="../styles/styles1.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/styles3.css" />
+  <script src="../scripts/script.js"></script>
+</head>
+
+<body>
+  <div id="wrapper-body">
+    <div id="header-container">
+      <header id="header">Project-x</header>
     </div>
-    <footer id="footer">
-      <p id="footer-text">© 2023 Project-x</p>
+    <div id="container-frosty">
+      <div id="music-header-div">
+        <h1 id="music-header">Music Files</h1>
+        <button type="button" class="next-btn" onclick="location.reload()">Load new song
+          <!-- lmao this doesn't really load anything it just refreshes the page, i'll try and work on something but this is fine for now, but if there's 3 or less songs in the array then it doesn't work everytime
+            I should probably just cycle through each song to the next instead of randomizing-->
+
+        </button>
+      </div>
+
+      <ul id="genre-list">
+        <button type="button" id="rock-btn" class="genre-list" onclick="playRockSong()">Rock</button>
+        <button type="button" id="pop-btn" class="genre-list" onclick="playPopSong()">Pop</button>
+        <button type="button" id="hip-hop-btn" class="genre-list" onclick="playHipHopSong()">Hip-Hop</button>
+        <button type="button" id="jazz-btn" class="genre-list" onclick="playJazzSong()">Jazz</button>
+        <button type="button" id="classical-btn" class="genre-list" onclick="playClassicalSong()">Classical</button>
+        <button type="button" id="country-btn" class="genre-list" onclick="playCountrySong()">Country</button>
+        <button type="button" id="metal-btn" class="genre-list" onclick="playMetalSong()">Metal</button>
+        <button type="button" id="rnb-btn" class="genre-list" onclick="playRnBSong()">RnB</button>
+        <button type="button" id="reggae-btn" class="genre-list" onclick="playReggaeSong()">Reggae</button>
+        <button type="button" id="soul-btn" class="genre-list" onclick="playSoulSong()">Soul</button>
+        <button type="button" id="funk-btn" class="genre-list" onclick="playFunkSong()">Funk</button>
+        <button type="button" id="disco-btn" class="genre-list" onclick="playDiscoSong()">Disco</button>
+        <button type="button" id="spongecore-btn" class="genre-list" onclick="playSpongecoreSong()">Spongecore</button>
+        <button type="button" id="dnb-btn" class="genre-list" onclick="playDnbSong()">DnB</button>
+        <button type="button" id="funkmtg-btn" class="genre-list" onclick="playFunkmtgSong()">Funk MTG</button>
+        <!-- might take the disco soul and funk buttons out not sure yet -->
+        <!-- IDEA: when clicked(or hovered) there should be a button that pops out the side of the list that has information about the genre -->
+      </ul>
+    </div>
+    <p id="song-name"></p>
+    <div id="sideBar">
+      <div id="logoDiv">
+        <img src="/media/icons/logo.svg" id="logoImg" alt="logo" />
+      </div>
+      <nav>
+        <ul id="sideBar-ul">
+          <li class="tabs">
+            <a class="tab-link" href="home.html">
+              <img src="/media/icons/home-icon.png" class="icons" />Home
+            </a>
+          </li>
+          <li class="tabs">
+            <a class="tab-link" href="playlist.html">
+              <img src="/media/icons/headphones.png" class="icons" />Playlist
+            </a>
+          </li>
+          <li class="tabs">
+            <a class="tab-link" href="music.html">
+              <img src="/media/icons/music-note.png" class="icons" />Music
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="menu-icon-container">
+      <img src="/media/icons/menu-icon.png" id="menu-icon" onclick="toggleSidebar()" />
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <footer id="footer">
+    <p id="footer-text">© 2023 Project-x</p>
 
 
-    </footer>
-  </body>
+  </footer>
+</body>
+
 </html>
