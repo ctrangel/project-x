@@ -19,10 +19,12 @@ and a music page where you can sample songs from different genres.
 
 We are actively working to expand the site and come up with more ideas and pages.
 
-## run locally
 
-we are working to deploy this site soon, but for now...
-Here is the github pages link https://ctrangel.github.io/project-x/directory/home.html
+It is now up on http://ctrangel.it.pointpark.edu/directory/home.html
+Here is the github pages link as well https://ctrangel.github.io/project-x/directory/home.html
+
+
+## run locally
 
 If you would like to run this site locally follow these steps
 
