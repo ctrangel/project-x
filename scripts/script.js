@@ -200,3 +200,15 @@ function playHipHopSong() {
 /* TODO: add rest of buttons and add css class function to make cool border animation when song is playing
          add js function to better display song names instead of the path names
 */
+
+playlistForm.addEventListener("submit", function(event) {
+  let arr = [
+    "Love that song",
+    "I guess",
+    "interesting choice of music",
+    "You like this song?",
+    "This song is trash"
+  ]
+let random = Math.floor((Math.random()* arr.length) % arr.length);
+  alert(arr[random]);
+});
