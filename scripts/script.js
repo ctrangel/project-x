@@ -181,6 +181,7 @@ function playclassicalSong() {
     "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
     "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
   ];
+  // Country
   var countryAudio;
   function playcountrySong() {
     let randomArray = [
@@ -190,6 +191,7 @@ function playclassicalSong() {
       "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
       "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
     ];
+    // Metal
     var metalAudio;
   function playmetalSong() {
     let randomArray = [
@@ -199,6 +201,7 @@ function playclassicalSong() {
       "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
       "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
     ];
+    // Rnb
     var rnbAudio;
   function playrnbSong() {
     let randomArray = [
@@ -208,6 +211,7 @@ function playclassicalSong() {
       "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
       "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
     ];
+    // Reggae
     var reggaeAudio;
   function playreggaeSong() {
     let randomArray = [
@@ -217,6 +221,7 @@ function playclassicalSong() {
       "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
       "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
     ];
+    // Soul
     var soulAudio;
   function playsoulSong() {
     let randomArray = [
@@ -226,6 +231,7 @@ function playclassicalSong() {
       "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
       "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
     ];
+    // Funk
     var funkAudio;
   function playfunkSong() {
     let randomArray = [
@@ -235,6 +241,7 @@ function playclassicalSong() {
       "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
       "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
     ];
+    // Disco
     var discoAudio;
   function playdiscoSong() {
     let randomArray = [
@@ -244,6 +251,7 @@ function playclassicalSong() {
       "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
       "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
     ];
+    // Spongecore
     var spongecoreAudio;
   function playspongecoreSong() {
     let randomArray = [
@@ -253,6 +261,7 @@ function playclassicalSong() {
       "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
       "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
     ];
+    // Dnb
     var dnbAudio;
   function playdnbSong() {
     let randomArray = [
@@ -262,6 +271,7 @@ function playclassicalSong() {
       "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
       "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
     ];
+    // Funk MTG
     var funkmtgAudio;
   function playfunkmtgSong() {
     let randomArray = [
