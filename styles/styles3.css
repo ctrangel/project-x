@@ -136,3 +136,21 @@ body {
 		background-position: 0% 50%;
 	}
 }
+
+#beat-maker-icon {
+  width: 49px;
+    height: 42px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 20px;
+    left: 111px;
+    z-index: 1;
+}
+#beat-maker 
+#beat-maker-icon:hover {
+  background-color: pink;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
