@@ -151,7 +151,7 @@ function playPopSong() {
 }
 
 // play hip hop song button function
-
+//hip hop 
 var hiphopAudio;
 function playHipHopSong() {
   let randomArray = [
@@ -161,7 +161,116 @@ function playHipHopSong() {
     "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
     "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
   ];
-
+ //Jazz
+  var jazzAudio;
+  function playjazzSong() {
+    let randomArray = [
+      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+    ];
+    // Classical
+    var classicalAudio;
+function playclassicalSong() {
+  let randomArray = [
+    "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+    "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+    "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+    "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+    "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+  ];
+  var countryAudio;
+  function playcountrySong() {
+    let randomArray = [
+      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+    ];
+    var metalAudio;
+  function playmetalSong() {
+    let randomArray = [
+      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+    ];
+    var rnbAudio;
+  function playrnbSong() {
+    let randomArray = [
+      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+    ];
+    var reggaeAudio;
+  function playreggaeSong() {
+    let randomArray = [
+      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+    ];
+    var soulAudio;
+  function playsoulSong() {
+    let randomArray = [
+      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+    ];
+    var funkAudio;
+  function playfunkSong() {
+    let randomArray = [
+      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+    ];
+    var discoAudio;
+  function playdiscoSong() {
+    let randomArray = [
+      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+    ];
+    var spongecoreAudio;
+  function playspongecoreSong() {
+    let randomArray = [
+      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+    ];
+    var dnbAudio;
+  function playdnbSong() {
+    let randomArray = [
+      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+    ];
+    var funkmtgAudio;
+  function playfunkmtgSong() {
+    let randomArray = [
+      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+    ];
   let button = document.getElementById("hip-hop-btn");
 
   if (!hiphopAudio) {
