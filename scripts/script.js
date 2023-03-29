@@ -288,6 +288,96 @@ function playClassicalSong() {
 // ######################################### Play Country song button function #########################################################
 
 
+var countryAudio;
+function playCountrySong() {
+  let randomArray = [
+    "../media/sound/songs/country/Johnny_Cash_-_Ring_of_Fire.mp3",
+    "../media/sound/songs/country/Johnny_Cash_-_Ring_of_Fire.mp3",
+    "../media/sound/songs/country/Johnny_Cash_-_Ring_of_Fire.mp3",
+    "../media/sound/songs/country/Johnny_Cash_-_Ring_of_Fire.mp3",
+  ];
+
+  let button = document.getElementById("country-btn");
+
+  if (!countryAudio) {
+    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    countryAudio = new Audio();
+    countryAudio.src = randomSong;
+  }
+
+  if (countryAudio.paused) {
+    countryAudio.play();
+    button.innerHTML = "II";
+  } else {
+    countryAudio.pause();
+    button.innerHTML = "Country";
+  }
+  //display current song file below
+  let songNameElement = document.getElementById("song-name");
+
+  countryAudio.addEventListener("play", function () {
+    let songName = countryAudio.src.slice(0, -4).split("/").pop();
+    songNameElement.textContent = songName;
+  });
+
+  countryAudio.addEventListener("play", function changeBackground() {
+    let bckGround = document.getElementById("genre-list");
+    bckGround.className = "on-play";
+  });
+
+  countryAudio.addEventListener("pause", function revertBackground() {
+    let originalBckGround = document.getElementById("genre-list");
+    originalBckGround.classList.remove("on-play");
+  });
+}
+
+// ######################################### Play Metal song button function #########################################################
+
+var metalAudio;
+function playMetalSong() {
+  let randomArray = [
+    "../media/sound/songs/metal/Metallica_-_Enter_Sandman.mp3",
+    "../media/sound/songs/metal/Metallica_-_Enter_Sandman.mp3",
+    "../media/sound/songs/metal/Metallica_-_Enter_Sandman.mp3",
+    "../media/sound/songs/metal/Metallica_-_Enter_Sandman.mp3",
+  ];
+  
+  let button = document.getElementById("metal-btn");
+
+  if (!metalAudio) {
+    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    metalAudio = new Audio();
+    metalAudio.src = randomSong;
+  }
+
+  if (metalAudio.paused) {
+    metalAudio.play();
+    button.innerHTML = "II";
+  } else {
+    metalAudio.pause();
+    button.innerHTML = "Metal";
+  }
+  //display current song file below
+  let songNameElement = document.getElementById("song-name");
+
+  metalAudio.addEventListener("play", function () {
+    let songName = metalAudio.src.slice(0, -4).split("/").pop();
+    songNameElement.textContent = songName;
+  });
+
+  metalAudio.addEventListener("play", function changeBackground() {
+    let bckGround = document.getElementById("genre-list");
+    bckGround.className = "on-play";
+  });
+
+  metalAudio.addEventListener("pause", function revertBackground() {
+    let originalBckGround = document.getElementById("genre-list");
+    originalBckGround.classList.remove("on-play");
+  });
+}
+
+// ######################################### Play RnB song button function #########################################################
+
 
 
 
