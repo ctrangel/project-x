@@ -423,6 +423,49 @@ function playRnBSong() {
 
 // ######################################### Play Reggae song button function #########################################################
 
+var reggaeAudio;
+function playReggaeSong() {
+  let randomArray = [
+    "../media/sound/songs/reggae/Reggae_Song.mp3",
+    "../media/sound/songs/reggae/Reggae_Song.mp3",
+    "../media/sound/songs/reggae/Reggae_Song.mp3",
+    "../media/sound/songs/reggae/Reggae_Song.mp3",
+  ];
+
+  let button = document.getElementById("reggae-btn");
+
+  if (!reggaeAudio) {
+    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    reggaeAudio = new Audio();
+    reggaeAudio.src = randomSong;
+  }
+
+  if (reggaeAudio.paused) {
+    reggaeAudio.play();
+    button.innerHTML = "II";
+  } else {
+    reggaeAudio.pause();
+    button.innerHTML = "Reggae";
+  }
+  //display current song file below
+  let songNameElement = document.getElementById("song-name");
+
+  reggaeAudio.addEventListener("play", function () {
+    let songName = reggaeAudio.src.slice(0, -4).split("/").pop();
+    songNameElement.textContent = songName;
+  });
+
+  reggaeAudio.addEventListener("play", function changeBackground() {
+    let bckGround = document.getElementById("genre-list");
+    bckGround.className = "on-play";
+  });
+
+  reggaeAudio.addEventListener("pause", function revertBackground() {
+    let originalBckGround = document.getElementById("genre-list");
+    originalBckGround.classList.remove("on-play");
+  });
+}
+
 
 
 
