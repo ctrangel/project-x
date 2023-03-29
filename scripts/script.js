@@ -556,6 +556,54 @@ function playFunkSong() {
   });
 }
 
+// ######################################### Play Disco song button function #########################################################
+
+var discoAudio;
+function playDiscoSong() {
+  let randomArray = [
+    "../media/sound/songs/disco/Disco_Song.mp3",
+    "../media/sound/songs/disco/Disco_Song.mp3",
+    "../media/sound/songs/disco/Disco_Song.mp3",
+    "../media/sound/songs/disco/Disco_Song.mp3",
+  ];
+
+  let button = document.getElementById("disco-btn");
+
+  if (!discoAudio) {
+    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    discoAudio = new Audio();
+    discoAudio.src = randomSong;
+  }
+
+  if (discoAudio.paused) {
+    discoAudio.play();
+    button.innerHTML = "II";
+  } else {
+    discoAudio.pause();
+    button.innerHTML = "Disco";
+  }
+
+  let songNameElement = document.getElementById("song-name");
+
+  discoAudio.addEventListener("play", function () {
+    let songName = discoAudio.src.slice(0, -4).split("/").pop();
+    songNameElement.textContent = songName;
+  });
+
+  discoAudio.addEventListener("play", function changeBackground() {
+    let bckGround = document.getElementById("genre-list");
+    bckGround.className = "on-play";
+  });
+
+  discoAudio.addEventListener("pause", function revertBackground() {
+    let originalBckGround = document.getElementById("genre-list");
+    originalBckGround.classList.remove("on-play");
+  });
+}
+
+// ######################################### Play Spongecore song button function #########################################################
+
+
 
 
 
