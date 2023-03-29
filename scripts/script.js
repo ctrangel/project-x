@@ -378,8 +378,50 @@ function playMetalSong() {
 
 // ######################################### Play RnB song button function #########################################################
 
+var rnbAudio;
+function playRnBSong() {
+  let randomArray = [
+    "../media/sound/songs/rnb/Drake_-_Hotline_Bling.mp3",
+    "../media/sound/songs/rnb/Drake_-_Hotline_Bling.mp3",
+    "../media/sound/songs/rnb/Drake_-_Hotline_Bling.mp3",
+    "../media/sound/songs/rnb/Drake_-_Hotline_Bling.mp3",
+  ];
 
+  let button = document.getElementById("rnb-btn");
 
+  if (!rnbAudio) {
+    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    rnbAudio = new Audio();
+    rnbAudio.src = randomSong;
+  }
+
+  if (rnbAudio.paused) {
+    rnbAudio.play();
+    button.innerHTML = "II";
+  } else {
+    rnbAudio.pause();
+    button.innerHTML = "RnB";
+  }
+  //display current song file below
+  let songNameElement = document.getElementById("song-name");
+
+  rnbAudio.addEventListener("play", function () {
+    let songName = rnbAudio.src.slice(0, -4).split("/").pop();
+    songNameElement.textContent = songName;
+  });
+
+  rnbAudio.addEventListener("play", function changeBackground() {
+    let bckGround = document.getElementById("genre-list");
+    bckGround.className = "on-play";
+  });
+
+  rnbAudio.addEventListener("pause", function revertBackground() {
+    let originalBckGround = document.getElementById("genre-list");
+    originalBckGround.classList.remove("on-play");
+  });
+}
+
+// ######################################### Play Reggae song button function #########################################################
 
 
 
