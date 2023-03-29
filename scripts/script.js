@@ -511,6 +511,53 @@ function playSoulSong() {
   });
 }
 
+// ######################################### Play Funk song button function #########################################################
+
+var funkAudio;
+function playFunkSong() {
+  let randomArray = [
+    "../media/sound/songs/funk/Funk_Song.mp3",
+    "../media/sound/songs/funk/Funk_Song.mp3",
+    "../media/sound/songs/funk/Funk_Song.mp3",
+    "../media/sound/songs/funk/Funk_Song.mp3",
+  ];
+   
+  let button = document.getElementById("funk-btn");
+
+  if (!funkAudio) {
+    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    funkAudio = new Audio();
+    funkAudio.src = randomSong;
+  }
+
+  if (funkAudio.paused) {
+    funkAudio.play();
+    button.innerHTML = "II";
+  } else {
+    funkAudio.pause();
+    button.innerHTML = "Funk";
+  }
+  //display current song file below
+  let songNameElement = document.getElementById("song-name");
+
+  funkAudio.addEventListener("play", function () {
+    let songName = funkAudio.src.slice(0, -4).split("/").pop();
+    songNameElement.textContent = songName;
+  });
+
+  funkAudio.addEventListener("play", function changeBackground() {
+    let bckGround = document.getElementById("genre-list");
+    bckGround.className = "on-play";
+  });
+
+  funkAudio.addEventListener("pause", function revertBackground() {
+    let originalBckGround = document.getElementById("genre-list");
+    originalBckGround.classList.remove("on-play");
+  });
+}
+
+
+
 
 
 
