@@ -606,10 +606,12 @@ function playDiscoSong() {
 var spongecoreAudio;
 function playSpongecoreSong() {
   let randomArray = [
-    "../media/sound/songs/spongecore/Spongecore_Song.mp3",
-    "../media/sound/songs/spongecore/Spongecore_Song.mp3",
-    "../media/sound/songs/spongecore/Spongecore_Song.mp3",
-    "../media/sound/songs/spongecore/Spongecore_Song.mp3",
+    "../media/sound/songs/spongecore/spongecore_breakpants.mp3",
+    "../media/sound/songs/spongecore/Robot_krabs.mp3",
+    "../media/sound/songs/spongecore/Look_at_it.mp3",
+    "../media/sound/songs/spongecore/Imagination.mp3",
+    "../media/sound/songs/spongecore/Boating_school_blues.mp3",
+
   ];
 
   let button = document.getElementById("spongecore-btn");
@@ -741,7 +743,7 @@ function playFunkMtgSong() {
 
 
 
-
+// TODO: add volume slider
 
 
 
