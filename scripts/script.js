@@ -692,6 +692,53 @@ function playDnbSong() {
   });
 }
 
+// ######################################### Play funk mtg song button function #########################################################
+
+var funkMtgAudio;
+function playFunkMtgSong() {
+  let randomArray = [
+    "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+    "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+    "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+    "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+    "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+  ];
+
+  let button = document.getElementById("funk-mtg-btn");
+
+  if (!funkMtgAudio) {
+    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    funkMtgAudio = new Audio();
+    funkMtgAudio.src = randomSong;
+  }
+
+  if (funkMtgAudio.paused) {
+    funkMtgAudio.play();
+    button.innerHTML = "II";
+  } else {
+    funkMtgAudio.pause();
+    button.innerHTML = "Funk MTG";
+  }
+
+  let songNameElement = document.getElementById("song-name");
+
+  funkMtgAudio.addEventListener("play", function () {
+    let songName = funkMtgAudio.src.slice(0, -4).split("/").pop();
+    songNameElement.textContent = songName;
+  });
+
+  funkMtgAudio.addEventListener("play", function changeBackground() {
+    let bckGround = document.getElementById("genre-list");
+    bckGround.className = "on-play";
+  });
+
+  funkMtgAudio.addEventListener("pause", function revertBackground() {
+    let originalBckGround = document.getElementById("genre-list");
+    originalBckGround.classList.remove("on-play");
+  });
+}
+
+
 
 
 
