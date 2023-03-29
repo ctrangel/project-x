@@ -603,6 +603,51 @@ function playDiscoSong() {
 
 // ######################################### Play Spongecore song button function #########################################################
 
+var spongecoreAudio;
+function playSpongecoreSong() {
+  let randomArray = [
+    "../media/sound/songs/spongecore/Spongecore_Song.mp3",
+    "../media/sound/songs/spongecore/Spongecore_Song.mp3",
+    "../media/sound/songs/spongecore/Spongecore_Song.mp3",
+    "../media/sound/songs/spongecore/Spongecore_Song.mp3",
+  ];
+
+  let button = document.getElementById("spongecore-btn");
+
+  if (!spongecoreAudio) {
+    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    spongecoreAudio = new Audio();
+    spongecoreAudio.src = randomSong;
+  }
+
+  if (spongecoreAudio.paused) {
+    spongecoreAudio.play();
+    button.innerHTML = "II";
+  } else {
+    spongecoreAudio.pause();
+    button.innerHTML = "Spongecore";
+  }
+
+  let songNameElement = document.getElementById("song-name");
+
+  spongecoreAudio.addEventListener("play", function () {
+    let songName = spongecoreAudio.src.slice(0, -4).split("/").pop();
+    songNameElement.textContent = songName;
+  });
+
+  spongecoreAudio.addEventListener("play", function changeBackground() {
+    let bckGround = document.getElementById("genre-list");
+    bckGround.className = "on-play";
+  });
+
+  spongecoreAudio.addEventListener("pause", function revertBackground() {
+    let originalBckGround = document.getElementById("genre-list");
+    originalBckGround.classList.remove("on-play");
+  });
+}
+
+
+
 
 
 
