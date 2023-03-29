@@ -646,6 +646,55 @@ function playSpongecoreSong() {
   });
 }
 
+// ######################################### Play DnB song button function #########################################################
+
+var dnbAudio;
+function playDnbSong() {
+  let randomArray = [
+    "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+    "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+    "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+    "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+    "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+  ];
+
+  let button = document.getElementById("dnb-btn");
+
+  if (!dnbAudio) {
+    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    dnbAudio = new Audio();
+    dnbAudio.src = randomSong;
+  }
+
+  if (dnbAudio.paused) {
+    dnbAudio.play();
+    button.innerHTML = "II";
+  } else {
+    dnbAudio.pause();
+    button.innerHTML = "DnB";
+  }
+
+  let songNameElement = document.getElementById("song-name");
+
+  dnbAudio.addEventListener("play", function () {
+    let songName = dnbAudio.src.slice(0, -4).split("/").pop();
+    songNameElement.textContent = songName;
+  });
+
+  dnbAudio.addEventListener("play", function changeBackground() {
+    let bckGround = document.getElementById("genre-list");
+    bckGround.className = "on-play";
+  });
+
+  dnbAudio.addEventListener("pause", function revertBackground() {
+    let originalBckGround = document.getElementById("genre-list");
+    originalBckGround.classList.remove("on-play");
+  });
+}
+
+
+
+
 
 
 
