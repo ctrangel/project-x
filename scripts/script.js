@@ -38,21 +38,18 @@ function displayDetails() {
 
   row++;
 }
-  let input = document.getElementsByClassName("input").value;
-  let form = document.getElementById("form");
-  form.addEventListener("submit", function (event) { 
-    event.preventDefault();
+let input = document.getElementsByClassName("input").value;
+let form = document.getElementById("form");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
 
-    let audio = new Audio("../media/sound/sfx/vine_boomst.wav");
-    console.log(input);
-    if (input === "") {
-      return false;
-    } else {
+  let audio = new Audio("../media/sound/sfx/vine_boomst.wav");
+  console.log(input);
+  if (input === "") {
+    return false;
+  } else {
     audio.play();
-    }
-
-
-  
+  }
 });
 
 // Play rock song button function
@@ -103,7 +100,7 @@ function playRockSong() {
   });
 }
 
-// Play pop song button function
+//###################################### Play pop song button function #########################################################
 
 var popAudio;
 function playPopSong() {
@@ -150,8 +147,8 @@ function playPopSong() {
   });
 }
 
-// play hip hop song button function
-//hip hop 
+// ##############################play hip hop song button function#####################################################
+//hip hop
 var hiphopAudio;
 function playHipHopSong() {
   let randomArray = [
@@ -161,126 +158,7 @@ function playHipHopSong() {
     "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
     "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
   ];
- //Jazz
-  var jazzAudio;
-  function playjazzSong() {
-    let randomArray = [
-      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
-      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
-      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
-      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
-      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
-    ];
-    // Classical
-    var classicalAudio;
-function playclassicalSong() {
-  let randomArray = [
-    "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
-    "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
-    "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
-    "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
-    "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
-  ];
-  // Country
-  var countryAudio;
-  function playcountrySong() {
-    let randomArray = [
-      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
-      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
-      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
-      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
-      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
-    ];
-    // Metal
-    var metalAudio;
-  function playmetalSong() {
-    let randomArray = [
-      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
-      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
-      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
-      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
-      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
-    ];
-    // Rnb
-    var rnbAudio;
-  function playrnbSong() {
-    let randomArray = [
-      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
-      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
-      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
-      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
-      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
-    ];
-    // Reggae
-    var reggaeAudio;
-  function playreggaeSong() {
-    let randomArray = [
-      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
-      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
-      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
-      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
-      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
-    ];
-    // Soul
-    var soulAudio;
-  function playsoulSong() {
-    let randomArray = [
-      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
-      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
-      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
-      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
-      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
-    ];
-    // Funk
-    var funkAudio;
-  function playfunkSong() {
-    let randomArray = [
-      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
-      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
-      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
-      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
-      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
-    ];
-    // Disco
-    var discoAudio;
-  function playdiscoSong() {
-    let randomArray = [
-      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
-      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
-      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
-      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
-      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
-    ];
-    // Spongecore
-    var spongecoreAudio;
-  function playspongecoreSong() {
-    let randomArray = [
-      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
-      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
-      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
-      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
-      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
-    ];
-    // Dnb
-    var dnbAudio;
-  function playdnbSong() {
-    let randomArray = [
-      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
-      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
-      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
-      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
-      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
-    ];
-    // Funk MTG
-    var funkmtgAudio;
-  function playfunkmtgSong() {
-    let randomArray = [
-      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
-      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
-      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
-      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
-      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
-    ];
+
   let button = document.getElementById("hip-hop-btn");
 
   if (!hiphopAudio) {
@@ -316,18 +194,83 @@ function playclassicalSong() {
     // I am enamored, somehow this actually worked first time trying it.
   });
 }
+
+//###################################### Play Jazz song button function #########################################################
+
+var jazzAudio;
+function playJazzSong() {
+  let randomArray = [
+    "../media/sound/songs/jazz/Chet_Baker_-_My_Funny_Valentine.mp3",
+    "../media/sound/songs/jazz/Chet_Baker_-_My_Funny_Valentine.mp3",
+    "../media/sound/songs/jazz/Chet_Baker_-_My_Funny_Valentine.mp3",
+    "../media/sound/songs/jazz/Chet_Baker_-_My_Funny_Valentine.mp3",
+  ];
+
+  let button = document.getElementById("jazz-btn");
+
+  if (!jazzAudio) {
+    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    jazzAudio = new Audio();
+    jazzAudio.src = randomSong;
+  }
+
+  if (jazzAudio.paused) {
+    jazzAudio.play();
+    button.innerHTML = "II";
+  } else {
+    jazzAudio.pause();
+    button.innerHTML = "Jazz";
+  }
+  //display current song file below
+  let songNameElement = document.getElementById("song-name");
+
+  jazzAudio.addEventListener("play", function () {
+    let songName = jazzAudio.src.slice(0, -4).split("/").pop();
+    songNameElement.textContent = songName;
+  });
+
+  jazzAudio.addEventListener("play", function changeBackground() {
+    let bckGround = document.getElementById("genre-list");
+    bckGround.className = "on-play";
+  });
+
+  jazzAudio.addEventListener("pause", function revertBackground() {
+    let originalBckGround = document.getElementById("genre-list");
+    originalBckGround.classList.remove("on-play");
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* TODO: add rest of buttons and add css class function to make cool border animation when song is playing
          add js function to better display song names instead of the path names
 */
 
-playlistForm.addEventListener("submit", function(event) {
+
+
+
+playlistForm.addEventListener("submit", function (event) {
   let arr = [
     "Love that song",
     "I guess",
     "interesting choice of music",
     "You like this song?",
-    "This song is trash"
-  ]
-let random = Math.floor((Math.random()* arr.length) % arr.length);
+    "This song is trash",
+  ];
+  let random = Math.floor((Math.random() * arr.length) % arr.length);
   alert(arr[random]);
 });
