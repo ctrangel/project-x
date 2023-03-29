@@ -466,6 +466,51 @@ function playReggaeSong() {
   });
 }
 
+// ######################################### Play Soul song button function #########################################################
+
+var soulAudio;
+function playSoulSong() {
+  let randomArray = [
+    "../media/sound/songs/soul/Soul_Song.mp3",
+    "../media/sound/songs/soul/Soul_Song.mp3",
+    "../media/sound/songs/soul/Soul_Song.mp3",
+    "../media/sound/songs/soul/Soul_Song.mp3",
+  ];
+
+  let button = document.getElementById("soul-btn");
+
+  if (!soulAudio) {
+    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    soulAudio = new Audio();
+    soulAudio.src = randomSong;
+  }
+
+  if (soulAudio.paused) {
+    soulAudio.play();
+    button.innerHTML = "II";
+  } else {
+    soulAudio.pause();
+    button.innerHTML = "Soul";
+  }
+  //display current song file below
+  let songNameElement = document.getElementById("song-name");
+
+  soulAudio.addEventListener("play", function () {
+    let songName = soulAudio.src.slice(0, -4).split("/").pop();
+    songNameElement.textContent = songName;
+  });
+
+  soulAudio.addEventListener("play", function changeBackground() {
+    let bckGround = document.getElementById("genre-list");
+    bckGround.className = "on-play";
+  });
+
+  soulAudio.addEventListener("pause", function revertBackground() {
+    let originalBckGround = document.getElementById("genre-list");
+    originalBckGround.classList.remove("on-play");
+  });
+}
+
 
 
 
