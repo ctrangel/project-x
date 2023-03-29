@@ -240,6 +240,52 @@ function playJazzSong() {
   });
 }
 
+// ######################################### Play Classical song button function #########################################################
+
+var classicalAudio;
+function playClassicalSong() {
+  let randomArray = [
+    "../media/sound/songs/classical/Beethoven_-_Moonlight_Sonata.mp3",
+    "../media/sound/songs/classical/Beethoven_-_Moonlight_Sonata.mp3",
+    "../media/sound/songs/classical/Beethoven_-_Moonlight_Sonata.mp3",
+    "../media/sound/songs/classical/Beethoven_-_Moonlight_Sonata.mp3",
+  ];
+
+  let button = document.getElementById("classical-btn");
+
+  if (!classicalAudio) {
+    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    classicalAudio = new Audio();
+    classicalAudio.src = randomSong;
+  }
+
+  if (classicalAudio.paused) {
+    classicalAudio.play();
+    button.innerHTML = "II";
+  } else {
+    classicalAudio.pause();
+    button.innerHTML = "Classical";
+  }
+  //display current song file below
+  let songNameElement = document.getElementById("song-name");
+
+  classicalAudio.addEventListener("play", function () {
+    let songName = classicalAudio.src.slice(0, -4).split("/").pop();
+    songNameElement.textContent = songName;
+  });
+
+  classicalAudio.addEventListener("play", function changeBackground() {
+    let bckGround = document.getElementById("genre-list");
+    bckGround.className = "on-play";
+  });
+
+  classicalAudio.addEventListener("pause", function revertBackground() {
+    let originalBckGround = document.getElementById("genre-list");
+    originalBckGround.classList.remove("on-play");
+  });
+}
+
+// ######################################### Play Country song button function #########################################################
 
 
 
