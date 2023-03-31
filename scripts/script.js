@@ -52,12 +52,73 @@ form.addEventListener("submit", function (event) {
   }
 });
 
-
 // #####################################-Start of Music Files play functions-###############################################
 
-// ****Note: there is a bug that expands the buttons when you hit play, I found out it's because of the length of the song file when displayed, 
-//           -I think we can either shorten the file name, separate the display div and the play buttons, or make overflow hidden on the div
+// TODO: I'm sure we can take out all the song functions and make one more dynamic play function I'll start it here
 
+function playSong(genre, buttonId, songArrayGenre) {
+  let musicData = {
+    rock: [
+      "../media/sound/songs/rock/come_together_Beatles.wav",
+      "../media/sound/songs/rock/dear_maria_count_me_in_All_Tim.wav",
+      "../media/sound/songs/rock/simple_man_lynard_skynard.wav",
+      "../media/sound/songs/rock/some_version_of_Black_Betty-Ram_Jam.mp3",
+    ],
+    pop: [
+      "../media/sound/songs/pop/you_rock_my_world-michael_jackson.wav",
+      "../media/sound/songs/pop/big_girls_don't_cry-Fergie.wav",
+      "../media/sound/songs/pop/bad_guy-Billie_Eilish.mp3",
+      "../media/sound/songs/pop/Mariah_Carey-Obsessed(sped_up_a_lil).mp3",
+    ],
+    hipHop: [
+      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+    ],
+  };
+  let songArray = musicData[songArrayGenre];
+  let audio;
+  let button = document.getElementById(buttonId);
+
+  if (songArray && songArray.length > 0) {
+    audio = new Audio();
+    audio.src = songArray[Math.floor(Math.random() * songArray.length)];
+    console.log(audio.src);
+    console.log(songArray);
+  }
+
+  
+  
+  if (audio.paused) {
+    audio.play();
+    button.innerHTML = "II";
+  } else {
+    audio.pause();
+    button.innerHTML = "Pop";
+  }
+
+
+  //display current song file below
+  let songNameElement = document.getElementById("song-name");
+
+  audio.addEventListener("play", function () {
+    let songName = audio.src.slice(0, -4).split("/").pop();
+    songNameElement.textContent = songName;
+  });
+
+  // on play , changes background to moving gradient
+  audio.addEventListener("play", function changeBackground() {
+    let bckGround = document.getElementById("genre-list");
+    bckGround.className = "on-play";
+  });
+
+  audio.addEventListener("pause", function revertBackground() {
+    let originalBckGround = document.getElementById("genre-list");
+    originalBckGround.classList.remove("on-play");
+  });
+}
 
 // #####################################--- Play rock song button function---###############################################
 
@@ -82,13 +143,16 @@ function playRockSong() {
     rockAudio.src = randomSong;
   }
 
-  if (rockAudio.paused) {
-    rockAudio.play();
-    button.innerHTML = "II";
-  } else {
-    rockAudio.pause();
-    button.innerHTML = "Rock";
+  if (rockAudio) {
+    if (rockAudio.paused) {
+      rockAudio.play();
+      button.innerHTML = "II";
+    } else {
+      rockAudio.pause();
+      button.innerHTML = "Rock";
+    }
   }
+  
   //display current song file below
   let songNameElement = document.getElementById("song-name");
 
@@ -216,7 +280,8 @@ function playJazzSong() {
   let button = document.getElementById("jazz-btn");
 
   if (!jazzAudio) {
-    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    let randomSong =
+      randomArray[Math.floor(Math.random() * randomArray.length)];
     jazzAudio = new Audio();
     jazzAudio.src = randomSong;
   }
@@ -260,7 +325,8 @@ function playClassicalSong() {
   let button = document.getElementById("classical-btn");
 
   if (!classicalAudio) {
-    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    let randomSong =
+      randomArray[Math.floor(Math.random() * randomArray.length)];
     classicalAudio = new Audio();
     classicalAudio.src = randomSong;
   }
@@ -293,7 +359,6 @@ function playClassicalSong() {
 
 // ######################################### Play Country song button function #########################################################
 
-
 var countryAudio;
 function playCountrySong() {
   let randomArray = [
@@ -305,7 +370,8 @@ function playCountrySong() {
   let button = document.getElementById("country-btn");
 
   if (!countryAudio) {
-    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    let randomSong =
+      randomArray[Math.floor(Math.random() * randomArray.length)];
     countryAudio = new Audio();
     countryAudio.src = randomSong;
   }
@@ -345,11 +411,12 @@ function playMetalSong() {
     "../media/sound/songs/metal/SLAYER - WhenTheStillnessComes.mp3",
     "../media/sound/songs/metal/Slayer Black Magic.mp3",
   ];
-  
+
   let button = document.getElementById("metal-btn");
 
   if (!metalAudio) {
-    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    let randomSong =
+      randomArray[Math.floor(Math.random() * randomArray.length)];
     metalAudio = new Audio();
     metalAudio.src = randomSong;
   }
@@ -393,7 +460,8 @@ function playRnBSong() {
   let button = document.getElementById("rnb-btn");
 
   if (!rnbAudio) {
-    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    let randomSong =
+      randomArray[Math.floor(Math.random() * randomArray.length)];
     rnbAudio = new Audio();
     rnbAudio.src = randomSong;
   }
@@ -437,7 +505,8 @@ function playReggaeSong() {
   let button = document.getElementById("reggae-btn");
 
   if (!reggaeAudio) {
-    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    let randomSong =
+      randomArray[Math.floor(Math.random() * randomArray.length)];
     reggaeAudio = new Audio();
     reggaeAudio.src = randomSong;
   }
@@ -481,7 +550,8 @@ function playSoulSong() {
   let button = document.getElementById("soul-btn");
 
   if (!soulAudio) {
-    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    let randomSong =
+      randomArray[Math.floor(Math.random() * randomArray.length)];
     soulAudio = new Audio();
     soulAudio.src = randomSong;
   }
@@ -521,11 +591,12 @@ function playFunkSong() {
     "../media/sound/songs/funk/Funk_Song.mp3",
     "../media/sound/songs/funk/Funk_Song.mp3",
   ];
-   
+
   let button = document.getElementById("funk-btn");
 
   if (!funkAudio) {
-    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    let randomSong =
+      randomArray[Math.floor(Math.random() * randomArray.length)];
     funkAudio = new Audio();
     funkAudio.src = randomSong;
   }
@@ -569,7 +640,8 @@ function playDiscoSong() {
   let button = document.getElementById("disco-btn");
 
   if (!discoAudio) {
-    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    let randomSong =
+      randomArray[Math.floor(Math.random() * randomArray.length)];
     discoAudio = new Audio();
     discoAudio.src = randomSong;
   }
@@ -610,13 +682,13 @@ function playSpongecoreSong() {
     "../media/sound/songs/spongecore/Look_at_it.mp3",
     "../media/sound/songs/spongecore/Imagination.mp3",
     "../media/sound/songs/spongecore/Boating_school_blues.mp3",
-
   ];
 
   let button = document.getElementById("spongecore-btn");
 
   if (!spongecoreAudio) {
-    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    let randomSong =
+      randomArray[Math.floor(Math.random() * randomArray.length)];
     spongecoreAudio = new Audio();
     spongecoreAudio.src = randomSong;
   }
@@ -660,7 +732,8 @@ function playDnbSong() {
   let button = document.getElementById("dnb-btn");
 
   if (!dnbAudio) {
-    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    let randomSong =
+      randomArray[Math.floor(Math.random() * randomArray.length)];
     dnbAudio = new Audio();
     dnbAudio.src = randomSong;
   }
@@ -704,7 +777,8 @@ function playFunkmtgSong() {
   let button = document.getElementById("funkmtg-btn");
 
   if (!funkMtgAudio) {
-    let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
+    let randomSong =
+      randomArray[Math.floor(Math.random() * randomArray.length)];
     funkMtgAudio = new Audio();
     funkMtgAudio.src = randomSong;
   }
@@ -735,32 +809,11 @@ function playFunkmtgSong() {
   });
 }
 
-
-
-
 // TODO: add volume slider
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* TODO: add rest of buttons and add css class function to make cool border animation when song is playing
          add js function to better display song names instead of the path names
 */
-
-
-
 
 playlistForm.addEventListener("submit", function (event) {
   let arr = [
