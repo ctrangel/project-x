@@ -8,7 +8,7 @@ function toggleSidebar() {
   menuIcon.classList.toggle("open");
 }
 
-// playlist organizer script
+// #####################################playlist organizer script ###############################################
 let row = 1;
 let entry = document.getElementById("submit");
 
@@ -52,7 +52,15 @@ form.addEventListener("submit", function (event) {
   }
 });
 
-// Play rock song button function
+
+// #####################################-Start of Music Files play functions-###############################################
+
+// ****Note: there is a bug that expands the buttons when you hit play, I found out it's because of the length of the song file when displayed, 
+//           -I think we can either shorten the file name, separate the display div and the play buttons, or make overflow hidden on the div
+
+
+// #####################################--- Play rock song button function---###############################################
+
 // TODO: get rid of the random array thing, just figure out how to just cycle through the array
 
 var rockAudio;
@@ -218,7 +226,7 @@ function playJazzSong() {
     button.innerHTML = "II";
   } else {
     jazzAudio.pause();
-    button.innerHTML = "Jazz";
+    button.innerHTML = "Jazz"; // btn label bug was here fixed it
   }
   //display current song file below
   let songNameElement = document.getElementById("song-name");
@@ -686,14 +694,14 @@ function playDnbSong() {
 // ######################################### Play funk mtg song button function #########################################################
 
 var funkMtgAudio;
-function playFunkMtgSong() {
+function playFunkmtgSong() {
   let randomArray = [
     "../media/sound/songs/funk-mtg/MTG - PRIMEIRA DO ANO Ft MC GOMES BH-- [@djgb031] UDM.mp3",
     "../media/sound/songs/funk-mtg/MTG - TU SENTANDO EU BOLADÃO (DJ AZIN & DJ NEGUIN).mp3",
     "../media/sound/songs/funk-mtg/MTG PILOTO DE FUGA 001- DjLUIZCS(MCS - FABINOSKMC SACIMC G15MC BIANO DO IMPERA).mp3",
   ];
 
-  let button = document.getElementById("funk-mtg-btn");
+  let button = document.getElementById("funkmtg-btn");
 
   if (!funkMtgAudio) {
     let randomSong = randomArray[Math.floor(Math.random() * randomArray.length)];
