@@ -8,6 +8,10 @@ body {
   border: 2px solid;
 }
 
+#wrapper-body {
+  overflow: hidden;
+}
+
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   #genre-list {
     -webkit-backdrop-filter: blur(10px);
@@ -71,6 +75,7 @@ body {
   border-radius: 10px;
   background-color: #d9a282;
   text-align: center;
+  overflow: hidden;
 }
 #next-btn-div {
   display: flex;
@@ -118,6 +123,11 @@ body {
   }
 }
 
+#song-name {
+  width: 570px;
+  overflow: hidden;
+}
+
 #beat-maker-icon {
   width: 49px;
   height: 42px;
@@ -134,3 +144,4 @@ body {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
+
