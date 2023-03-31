@@ -200,10 +200,9 @@ function playHipHopSong() {
 var jazzAudio;
 function playJazzSong() {
   let randomArray = [
-    "../media/sound/songs/jazz/Chet_Baker_-_My_Funny_Valentine.mp3",
-    "../media/sound/songs/jazz/Chet_Baker_-_My_Funny_Valentine.mp3",
-    "../media/sound/songs/jazz/Chet_Baker_-_My_Funny_Valentine.mp3",
-    "../media/sound/songs/jazz/Chet_Baker_-_My_Funny_Valentine.mp3",
+    "../media/sound/songs/jazz/Moods - New Horizon (New Horizons EP Out Now).mp3",
+    "../media/sound/songs/jazz/Phony Ppl - End Of The Night (Louis Futon Remix) [Free Download].mp3",
+    "../media/sound/songs/jazz/Say It.mp3",
   ];
 
   let button = document.getElementById("jazz-btn");
@@ -245,10 +244,9 @@ function playJazzSong() {
 var classicalAudio;
 function playClassicalSong() {
   let randomArray = [
-    "../media/sound/songs/classical/Beethoven_-_Moonlight_Sonata.mp3",
-    "../media/sound/songs/classical/Beethoven_-_Moonlight_Sonata.mp3",
-    "../media/sound/songs/classical/Beethoven_-_Moonlight_Sonata.mp3",
-    "../media/sound/songs/classical/Beethoven_-_Moonlight_Sonata.mp3",
+    "../media/sound/songs/classical/Serenade Melancolique - Tchaikovsky.mp3",
+    "../media/sound/songs/classical/Tchaikovsky - Andante from Symphony no. 5.mp3",
+    "../media/sound/songs/classical/Waltz Of The Rain.mp3",
   ];
 
   let button = document.getElementById("classical-btn");
@@ -291,10 +289,9 @@ function playClassicalSong() {
 var countryAudio;
 function playCountrySong() {
   let randomArray = [
-    "../media/sound/songs/country/Johnny_Cash_-_Ring_of_Fire.mp3",
-    "../media/sound/songs/country/Johnny_Cash_-_Ring_of_Fire.mp3",
-    "../media/sound/songs/country/Johnny_Cash_-_Ring_of_Fire.mp3",
-    "../media/sound/songs/country/Johnny_Cash_-_Ring_of_Fire.mp3",
+    "../media/sound/songs/country/E.mp3",
+    "../media/sound/songs/country/Kiss My Country Ass.mp3",
+    "../media/sound/songs/country/Old Town Road (I Got The Horses In The Back) [Prod YoungKio].mp3",
   ];
 
   let button = document.getElementById("country-btn");
@@ -336,10 +333,9 @@ function playCountrySong() {
 var metalAudio;
 function playMetalSong() {
   let randomArray = [
-    "../media/sound/songs/metal/Metallica_-_Enter_Sandman.mp3",
-    "../media/sound/songs/metal/Metallica_-_Enter_Sandman.mp3",
-    "../media/sound/songs/metal/Metallica_-_Enter_Sandman.mp3",
-    "../media/sound/songs/metal/Metallica_-_Enter_Sandman.mp3",
+    "../media/sound/songs/metal/Slayer - Bloodline.mp3",
+    "../media/sound/songs/metal/SLAYER - WhenTheStillnessComes.mp3",
+    "../media/sound/songs/metal/Slayer Black Magic.mp3",
   ];
   
   let button = document.getElementById("metal-btn");
@@ -381,10 +377,9 @@ function playMetalSong() {
 var rnbAudio;
 function playRnBSong() {
   let randomArray = [
-    "../media/sound/songs/rnb/Drake_-_Hotline_Bling.mp3",
-    "../media/sound/songs/rnb/Drake_-_Hotline_Bling.mp3",
-    "../media/sound/songs/rnb/Drake_-_Hotline_Bling.mp3",
-    "../media/sound/songs/rnb/Drake_-_Hotline_Bling.mp3",
+    "../media/sound/songs/rnb/Grateful.mp3",
+    "../media/sound/songs/rnb/SoulFly.mp3",
+    "../media/sound/songs/rnb/What You Did (feat Ella Mai).mp3",
   ];
 
   let button = document.getElementById("rnb-btn");
@@ -426,10 +421,9 @@ function playRnBSong() {
 var reggaeAudio;
 function playReggaeSong() {
   let randomArray = [
-    "../media/sound/songs/reggae/Reggae_Song.mp3",
-    "../media/sound/songs/reggae/Reggae_Song.mp3",
-    "../media/sound/songs/reggae/Reggae_Song.mp3",
-    "../media/sound/songs/reggae/Reggae_Song.mp3",
+    "../media/sound/songs/reggae/J Boog - Lets Do It Again.mp3",
+    "../media/sound/songs/reggae/Simple Love Song.mp3",
+    "../media/sound/songs/reggae/Wade In Your Water.mp3",
   ];
 
   let button = document.getElementById("reggae-btn");
@@ -471,10 +465,9 @@ function playReggaeSong() {
 var soulAudio;
 function playSoulSong() {
   let randomArray = [
-    "../media/sound/songs/soul/Soul_Song.mp3",
-    "../media/sound/songs/soul/Soul_Song.mp3",
-    "../media/sound/songs/soul/Soul_Song.mp3",
-    "../media/sound/songs/soul/Soul_Song.mp3",
+    "../media/sound/songs/soul/A Day To Remember - Since youve Been Gone.mp3",
+    "../media/sound/songs/soul/I Never Loved a Man (The Way I Love You).mp3",
+    "../media/sound/songs/soul/Lets Stay Together.mp3",
   ];
 
   let button = document.getElementById("soul-btn");
@@ -516,8 +509,7 @@ function playSoulSong() {
 var funkAudio;
 function playFunkSong() {
   let randomArray = [
-    "../media/sound/songs/funk/Funk_Song.mp3",
-    "../media/sound/songs/funk/Funk_Song.mp3",
+    "../media/sound/songs/funk/MC Luan Da BS - Quer Acabar Comigo.mp3",
     "../media/sound/songs/funk/Funk_Song.mp3",
     "../media/sound/songs/funk/Funk_Song.mp3",
   ];
@@ -561,10 +553,9 @@ function playFunkSong() {
 var discoAudio;
 function playDiscoSong() {
   let randomArray = [
-    "../media/sound/songs/disco/Disco_Song.mp3",
-    "../media/sound/songs/disco/Disco_Song.mp3",
-    "../media/sound/songs/disco/Disco_Song.mp3",
-    "../media/sound/songs/disco/Disco_Song.mp3",
+    "../media/sound/songs/disco/Glenn Frey - Lovers Moon.mp3",
+    "../media/sound/songs/disco/Simpleng Tao -Gloc 9.mp3",
+    "../media/sound/songs/disco/So Many Questions (Side A).mp3",
   ];
 
   let button = document.getElementById("disco-btn");
@@ -653,11 +644,9 @@ function playSpongecoreSong() {
 var dnbAudio;
 function playDnbSong() {
   let randomArray = [
-    "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
-    "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
-    "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
-    "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
-    "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+    "../media/sound/songs/dnb/Brion Moore - Get Liff.mp3",
+    "../media/sound/songs/dnb/FIGHT! (PROD BRAHMAN).mp3",
+    "../media/sound/songs/dnb/You Lift Me Higher.mp3",
   ];
 
   let button = document.getElementById("dnb-btn");
@@ -699,11 +688,9 @@ function playDnbSong() {
 var funkMtgAudio;
 function playFunkMtgSong() {
   let randomArray = [
-    "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
-    "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
-    "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
-    "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
-    "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+    "../media/sound/songs/funk-mtg/MTG - PRIMEIRA DO ANO Ft MC GOMES BH-- [@djgb031] UDM.mp3",
+    "../media/sound/songs/funk-mtg/MTG - TU SENTANDO EU BOLADÃO (DJ AZIN & DJ NEGUIN).mp3",
+    "../media/sound/songs/funk-mtg/MTG PILOTO DE FUGA 001- DjLUIZCS(MCS - FABINOSKMC SACIMC G15MC BIANO DO IMPERA).mp3",
   ];
 
   let button = document.getElementById("funk-mtg-btn");
