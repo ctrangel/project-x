@@ -11,15 +11,11 @@ function toggleSidebar() {
 //Lil night mode script 
 
 function nightMode() {
-  let nightMode = document.getElementById("night-mode");
-  let body = document.getElementById("body");
-  let header = document.getElementById("header");
-  let footer = document.getElementById("footer");
+  let nightMode = document.getElementById("night-mode-btn");
+  let body = document.getElementsByTagName("body");
 
   nightMode.classList.toggle("night-mode");
   body.classList.toggle("night-mode");
-  header.classList.toggle("night-mode");
-  footer.classList.toggle("night-mode");
 }
 
   
