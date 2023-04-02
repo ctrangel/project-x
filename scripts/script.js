@@ -8,6 +8,24 @@ function toggleSidebar() {
   menuIcon.classList.toggle("open");
 }
 
+//Lil night mode script 
+
+function nightMode() {
+  let nightMode = document.getElementById("night-mode");
+  let body = document.getElementById("body");
+  let header = document.getElementById("header");
+  let footer = document.getElementById("footer");
+
+  nightMode.classList.toggle("night-mode");
+  body.classList.toggle("night-mode");
+  header.classList.toggle("night-mode");
+  footer.classList.toggle("night-mode");
+}
+
+  
+  
+  
+
 // #####################################playlist organizer script ###############################################
 let row = 1;
 let entry = document.getElementById("submit");

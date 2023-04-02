@@ -210,7 +210,7 @@ body {
 }
 
 #bottom-footer {
-  display: block;
+  display: none; /* Hide the footer for now till we can fix it */
   width: 100%;
   height: 10vh;
   position: absolute;
@@ -240,4 +240,14 @@ body {
 #bottom-list {
   display: flex;
   justify-content: center;
+}
+
+#night-mode-moon {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 19px;
+  right: 302px;
+  cursor: pointer;
+
 }
