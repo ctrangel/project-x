@@ -65,10 +65,21 @@ form.addEventListener("submit", function (event) {
 // #####################################-Start of Music Files play functions-###############################################
 
 // TODO: I'm sure we can take out all the song functions and make one more dynamic play function I'll start it here
-var audio;
-var currentGenreTag = genreTag;
+var audio = new Audio();
 function playSong(buttonId, songArrayGenre, genreTag) {
-  // ***************************************ALL SONGS AND GENRES OBJECT****************************************************************
+  
+  
+  // let audio = new Audio();
+  // console.log(audio);
+  let currentGenreTag = genreTag;
+  console.log(currentGenreTag);
+  let is_playing = false;
+  console.log(is_playing);
+  // let track_index = 0;
+
+  
+
+// ***************************************ALL SONGS AND GENRES OBJECT****************************************************************
   let musicData = {
     rock: [
       "../media/sound/songs/rock/come_together_Beatles.wav",
@@ -152,31 +163,99 @@ function playSong(buttonId, songArrayGenre, genreTag) {
       "../media/sound/songs/funk-mtg/MTG PILOTO DE FUGA 001- DjLUIZCS(MCS - FABINOSKMC SACIMC G15MC BIANO DO IMPERA).mp3",
     ],
   };
-  let songArray = musicData[songArrayGenre];
 
+  let songs = musicData[songArrayGenre];
+  console.log(songs);
   let button = document.getElementById(buttonId);
-  console.log(audio);
+  
+  let setList = {}; 
+  for (let track in songs) { // creates a setlist object with all the loaded songs from the given genre
+    setList[track] = songs[track];
+  }
+  console.log(setList);
 
-  if (!audio || genreTag != currentGenreTag) {
-    if (songArray && songArray.length > 0) {
-      audio = new Audio();
-      audio.src = songArray[Math.floor(Math.random() * songArray.length)];
-      console.log(audio.src);
-      console.log(songArray);
+  let songNumber = Math.floor(Math.random() * songs.length); // picks a random song from the setlist
+  console.log(songNumber);
+
+  let nextBtn = document.getElementById("next-btn");
+  nextBtn.onclick = function() {
+    songNumber++;
+    if (songNumber > songs.length - 1) {
+      songNumber = 0;
     }
   }
 
-  console.log(audio.genre);
+  audio = new Audio(songs[songNumber]);
+  console.log(audio);
 
   if (audio.paused) {
     audio.play();
     button.innerHTML = "II";
+    console.log("it's playing")
   } else {
     audio.pause();
     button.innerHTML = songArrayGenre;
+    console.log("it's paused")
   }
 
-  //display current song file below
+
+  
+  
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+
+
+  // console.log(audio);
+
+
+
+
+
+  // if (!audio || genreTag != currentGenreTag) {
+  //   if (songArray && songArray.length > 0 && currentAudio == null) {
+  //     audio = new Audio();
+  //     audio.src = songArray[Math.floor(Math.random() * songArray.length)];
+  //     // console.log(audio.src);
+  //     // console.log(songArray);
+  //     console.log("is this running?")
+  //   } else {
+  //     // Reset audio object
+  //     audio.pause();
+  //     audio.currentTime = 0;
+  //   }
+  // }
+
+  // // console.log(audio.genre);
+  //  currentAudio = audio;
+
+  // if (currentAudio.paused) {
+  //   currentAudio.play();
+  //   button.innerHTML = "II";
+  //   console.log("it's playing")
+  // } else if (!currentAudio.paused) {
+  //   console.log("it's paused")
+  //   currentAudio.pause();
+  //   button.innerHTML = songArrayGenre;
+  // } else {
+  //   currentAudio.pause();
+  //   button.innerHTML = songArrayGenre;
+  // }
+
+  //display current song file below                         ******This is fine it actually still works***&*&*&*&*
   let songNameElement = document.getElementById("song-name");
 
   audio.addEventListener("play", function () {
