@@ -69,8 +69,8 @@ form.addEventListener("submit", function (event) {
 // #####################################-Start of Music Files play functions-###############################################
 
 // TODO: I'm sure we can take out all the song functions and make one more dynamic play function I'll start it here
-
-function playSong(genre, buttonId, songArrayGenre) {
+var audio;
+function playSong(buttonId, songArrayGenre) {
   let musicData = {
     rock: [
       "../media/sound/songs/rock/come_together_Beatles.wav",
@@ -93,14 +93,16 @@ function playSong(genre, buttonId, songArrayGenre) {
     ],
   };
   let songArray = musicData[songArrayGenre];
-  let audio;
+ 
   let button = document.getElementById(buttonId);
 
-  if (songArray && songArray.length > 0) {
-    audio = new Audio();
-    audio.src = songArray[Math.floor(Math.random() * songArray.length)];
-    console.log(audio.src);
-    console.log(songArray);
+  if(!audio) {
+    if (songArray && songArray.length > 0) {
+      audio = new Audio();
+      audio.src = songArray[Math.floor(Math.random() * songArray.length)];
+      console.log(audio.src);
+      console.log(songArray);
+    }
   }
 
   
