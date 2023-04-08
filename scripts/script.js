@@ -8,7 +8,7 @@ function toggleSidebar() {
   menuIcon.classList.toggle("open");
 }
 
-//Lil night mode script 
+//Lil night mode script
 
 function nightMode() {
   let nightMode = document.getElementById("night-mode-btn");
@@ -17,10 +17,6 @@ function nightMode() {
   nightMode.classList.toggle("night-mode");
   body.classList.toggle("night-mode");
 }
-
-  
-  
-  
 
 // #####################################playlist organizer script ###############################################
 let row = 1;
@@ -70,7 +66,9 @@ form.addEventListener("submit", function (event) {
 
 // TODO: I'm sure we can take out all the song functions and make one more dynamic play function I'll start it here
 var audio;
-function playSong(buttonId, songArrayGenre) {
+var currentGenreTag = genreTag;
+function playSong(buttonId, songArrayGenre, genreTag) {
+  // ***************************************ALL SONGS AND GENRES OBJECT****************************************************************
   let musicData = {
     rock: [
       "../media/sound/songs/rock/come_together_Beatles.wav",
@@ -91,12 +89,75 @@ function playSong(buttonId, songArrayGenre) {
       "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
       "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
     ],
+    jazz: [
+      "../media/sound/songs/jazz/Moods - New Horizon (New Horizons EP Out Now).mp3",
+      "../media/sound/songs/jazz/Phony Ppl - End Of The Night (Louis Futon Remix) [Free Download].mp3",
+      "../media/sound/songs/jazz/Say It.mp3",
+    ],
+    classical: [
+      "../media/sound/songs/classical/Serenade Melancolique - Tchaikovsky.mp3",
+      "../media/sound/songs/classical/Tchaikovsky - Andante from Symphony no. 5.mp3",
+      "../media/sound/songs/classical/Waltz Of The Rain.mp3",
+    ],
+    country: [
+      "../media/sound/songs/country/E.mp3",
+      "../media/sound/songs/country/Kiss My Country Ass.mp3",
+      "../media/sound/songs/country/Old Town Road (I Got The Horses In The Back) [Prod YoungKio].mp3",
+    ],
+    metal: [
+      "../media/sound/songs/metal/Slayer - Bloodline.mp3",
+      "../media/sound/songs/metal/SLAYER - WhenTheStillnessComes.mp3",
+      "../media/sound/songs/metal/Slayer Black Magic.mp3",
+    ],
+    rnb: [
+      "../media/sound/songs/rnb/Grateful.mp3",
+      "../media/sound/songs/rnb/SoulFly.mp3",
+      "../media/sound/songs/rnb/What You Did (feat Ella Mai).mp3",
+    ],
+    reggae: [
+      "../media/sound/songs/reggae/J Boog - Lets Do It Again.mp3",
+      "../media/sound/songs/reggae/Simple Love Song.mp3",
+      "../media/sound/songs/reggae/Wade In Your Water.mp3",
+    ],
+    soul: [
+      "../media/sound/songs/soul/A Day To Remember - Since youve Been Gone.mp3",
+      "../media/sound/songs/soul/I Never Loved a Man (The Way I Love You).mp3",
+      "../media/sound/songs/soul/Lets Stay Together.mp3",
+    ],
+    funk: [
+      "../media/sound/songs/funk/MC Luan Da BS - Quer Acabar Comigo.mp3",
+      "../media/sound/songs/funk/Funk_Song.mp3",
+      "../media/sound/songs/funk/Funk_Song.mp3",
+    ],
+    disco: [
+      "../media/sound/songs/disco/Glenn Frey - Lovers Moon.mp3",
+      "../media/sound/songs/disco/Simpleng Tao -Gloc 9.mp3",
+      "../media/sound/songs/disco/So Many Questions (Side A).mp3",
+    ],
+    spongecore: [
+      "../media/sound/songs/spongecore/spongecore_breakpants.mp3",
+      "../media/sound/songs/spongecore/Robot_krabs.mp3",
+      "../media/sound/songs/spongecore/Look_at_it.mp3",
+      "../media/sound/songs/spongecore/Imagination.mp3",
+      "../media/sound/songs/spongecore/Boating_school_blues.mp3",
+    ],
+    dnb: [
+      "../media/sound/songs/dnb/Brion Moore - Get Liff.mp3",
+      "../media/sound/songs/dnb/FIGHT! (PROD BRAHMAN).mp3",
+      "../media/sound/songs/dnb/You Lift Me Higher.mp3",
+    ],
+    funk_mtg: [
+      "../media/sound/songs/funk-mtg/MTG - PRIMEIRA DO ANO Ft MC GOMES BH-- [@djgb031] UDM.mp3",
+      "../media/sound/songs/funk-mtg/MTG - TU SENTANDO EU BOLADÃO (DJ AZIN & DJ NEGUIN).mp3",
+      "../media/sound/songs/funk-mtg/MTG PILOTO DE FUGA 001- DjLUIZCS(MCS - FABINOSKMC SACIMC G15MC BIANO DO IMPERA).mp3",
+    ],
   };
   let songArray = musicData[songArrayGenre];
- 
-  let button = document.getElementById(buttonId);
 
-  if(!audio) {
+  let button = document.getElementById(buttonId);
+  console.log(audio);
+
+  if (!audio || genreTag != currentGenreTag) {
     if (songArray && songArray.length > 0) {
       audio = new Audio();
       audio.src = songArray[Math.floor(Math.random() * songArray.length)];
@@ -105,16 +166,15 @@ function playSong(buttonId, songArrayGenre) {
     }
   }
 
-  
-  
+  console.log(audio.genre);
+
   if (audio.paused) {
     audio.play();
     button.innerHTML = "II";
   } else {
     audio.pause();
-    button.innerHTML = "Pop";
+    button.innerHTML = songArrayGenre;
   }
-
 
   //display current song file below
   let songNameElement = document.getElementById("song-name");
@@ -168,7 +228,7 @@ function playRockSong() {
       button.innerHTML = "Rock";
     }
   }
-  
+
   //display current song file below
   let songNameElement = document.getElementById("song-name");
 
