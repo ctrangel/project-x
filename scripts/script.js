@@ -64,139 +64,139 @@ form.addEventListener("submit", function (event) {
 
 // #####################################-Start of Music Files play functions-###############################################
 
-// TODO: I'm sure we can take out all the song functions and make one more dynamic play function I'll start it here
-var audio = new Audio();
-function playSong(buttonId, songArrayGenre, genreTag) {
+// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  IGNORE ALL THIS FOR NOW I CANT GET IT TO WORK $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+// var audio = new Audio();
+// function playSong(buttonId, songArrayGenre, genreTag) {
   
   
-  // let audio = new Audio();
-  // console.log(audio);
-  let currentGenreTag = genreTag;
-  console.log(currentGenreTag);
-  let is_playing = false;
-  console.log(is_playing);
-  // let track_index = 0;
+//   // let audio = new Audio();
+//   // console.log(audio);
+//   let currentGenreTag = genreTag;
+//   console.log(currentGenreTag);
+//   let is_playing = false;
+//   console.log(is_playing);
+//   // let track_index = 0;
 
   
 
 // ***************************************ALL SONGS AND GENRES OBJECT****************************************************************
-  let musicData = {
-    rock: [
-      "../media/sound/songs/rock/come_together_Beatles.wav",
-      "../media/sound/songs/rock/dear_maria_count_me_in_All_Tim.wav",
-      "../media/sound/songs/rock/simple_man_lynard_skynard.wav",
-      "../media/sound/songs/rock/some_version_of_Black_Betty-Ram_Jam.mp3",
-    ],
-    pop: [
-      "../media/sound/songs/pop/you_rock_my_world-michael_jackson.wav",
-      "../media/sound/songs/pop/big_girls_don't_cry-Fergie.wav",
-      "../media/sound/songs/pop/bad_guy-Billie_Eilish.mp3",
-      "../media/sound/songs/pop/Mariah_Carey-Obsessed(sped_up_a_lil).mp3",
-    ],
-    hipHop: [
-      "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
-      "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
-      "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
-      "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
-      "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
-    ],
-    jazz: [
-      "../media/sound/songs/jazz/Moods - New Horizon (New Horizons EP Out Now).mp3",
-      "../media/sound/songs/jazz/Phony Ppl - End Of The Night (Louis Futon Remix) [Free Download].mp3",
-      "../media/sound/songs/jazz/Say It.mp3",
-    ],
-    classical: [
-      "../media/sound/songs/classical/Serenade Melancolique - Tchaikovsky.mp3",
-      "../media/sound/songs/classical/Tchaikovsky - Andante from Symphony no. 5.mp3",
-      "../media/sound/songs/classical/Waltz Of The Rain.mp3",
-    ],
-    country: [
-      "../media/sound/songs/country/E.mp3",
-      "../media/sound/songs/country/Kiss My Country Ass.mp3",
-      "../media/sound/songs/country/Old Town Road (I Got The Horses In The Back) [Prod YoungKio].mp3",
-    ],
-    metal: [
-      "../media/sound/songs/metal/Slayer - Bloodline.mp3",
-      "../media/sound/songs/metal/SLAYER - WhenTheStillnessComes.mp3",
-      "../media/sound/songs/metal/Slayer Black Magic.mp3",
-    ],
-    rnb: [
-      "../media/sound/songs/rnb/Grateful.mp3",
-      "../media/sound/songs/rnb/SoulFly.mp3",
-      "../media/sound/songs/rnb/What You Did (feat Ella Mai).mp3",
-    ],
-    reggae: [
-      "../media/sound/songs/reggae/J Boog - Lets Do It Again.mp3",
-      "../media/sound/songs/reggae/Simple Love Song.mp3",
-      "../media/sound/songs/reggae/Wade In Your Water.mp3",
-    ],
-    soul: [
-      "../media/sound/songs/soul/A Day To Remember - Since youve Been Gone.mp3",
-      "../media/sound/songs/soul/I Never Loved a Man (The Way I Love You).mp3",
-      "../media/sound/songs/soul/Lets Stay Together.mp3",
-    ],
-    funk: [
-      "../media/sound/songs/funk/MC Luan Da BS - Quer Acabar Comigo.mp3",
-      "../media/sound/songs/funk/Funk_Song.mp3",
-      "../media/sound/songs/funk/Funk_Song.mp3",
-    ],
-    disco: [
-      "../media/sound/songs/disco/Glenn Frey - Lovers Moon.mp3",
-      "../media/sound/songs/disco/Simpleng Tao -Gloc 9.mp3",
-      "../media/sound/songs/disco/So Many Questions (Side A).mp3",
-    ],
-    spongecore: [
-      "../media/sound/songs/spongecore/spongecore_breakpants.mp3",
-      "../media/sound/songs/spongecore/Robot_krabs.mp3",
-      "../media/sound/songs/spongecore/Look_at_it.mp3",
-      "../media/sound/songs/spongecore/Imagination.mp3",
-      "../media/sound/songs/spongecore/Boating_school_blues.mp3",
-    ],
-    dnb: [
-      "../media/sound/songs/dnb/Brion Moore - Get Liff.mp3",
-      "../media/sound/songs/dnb/FIGHT! (PROD BRAHMAN).mp3",
-      "../media/sound/songs/dnb/You Lift Me Higher.mp3",
-    ],
-    funk_mtg: [
-      "../media/sound/songs/funk-mtg/MTG - PRIMEIRA DO ANO Ft MC GOMES BH-- [@djgb031] UDM.mp3",
-      "../media/sound/songs/funk-mtg/MTG - TU SENTANDO EU BOLADÃO (DJ AZIN & DJ NEGUIN).mp3",
-      "../media/sound/songs/funk-mtg/MTG PILOTO DE FUGA 001- DjLUIZCS(MCS - FABINOSKMC SACIMC G15MC BIANO DO IMPERA).mp3",
-    ],
-  };
+  // let musicData = {
+  //   rock: [
+  //     "../media/sound/songs/rock/come_together_Beatles.wav",
+  //     "../media/sound/songs/rock/dear_maria_count_me_in_All_Tim.wav",
+  //     "../media/sound/songs/rock/simple_man_lynard_skynard.wav",
+  //     "../media/sound/songs/rock/some_version_of_Black_Betty-Ram_Jam.mp3",
+  //   ],
+  //   pop: [
+  //     "../media/sound/songs/pop/you_rock_my_world-michael_jackson.wav",
+  //     "../media/sound/songs/pop/big_girls_don't_cry-Fergie.wav",
+  //     "../media/sound/songs/pop/bad_guy-Billie_Eilish.mp3",
+  //     "../media/sound/songs/pop/Mariah_Carey-Obsessed(sped_up_a_lil).mp3",
+  //   ],
+  //   hipHop: [
+  //     "../media/sound/songs/hip-hop/mac_miller_100_grandkids.mp3",
+  //     "../media/sound/songs/hip-hop/You_know_how_we_do_it-Ice_cube.mp3",
+  //     "../media/sound/songs/hip-hop/Gangsta's_Paradise-Coolio.mp3",
+  //     "../media/sound/songs/hip-hop/IGOR'S_THEME-Tyler_The_Creator.mp3",
+  //     "../media/sound/songs/hip-hop/Big_Poppa-Notorious_B.I.G.mp3",
+  //   ],
+  //   jazz: [
+  //     "../media/sound/songs/jazz/Moods - New Horizon (New Horizons EP Out Now).mp3",
+  //     "../media/sound/songs/jazz/Phony Ppl - End Of The Night (Louis Futon Remix) [Free Download].mp3",
+  //     "../media/sound/songs/jazz/Say It.mp3",
+  //   ],
+  //   classical: [
+  //     "../media/sound/songs/classical/Serenade Melancolique - Tchaikovsky.mp3",
+  //     "../media/sound/songs/classical/Tchaikovsky - Andante from Symphony no. 5.mp3",
+  //     "../media/sound/songs/classical/Waltz Of The Rain.mp3",
+  //   ],
+  //   country: [
+  //     "../media/sound/songs/country/E.mp3",
+  //     "../media/sound/songs/country/Kiss My Country Ass.mp3",
+  //     "../media/sound/songs/country/Old Town Road (I Got The Horses In The Back) [Prod YoungKio].mp3",
+  //   ],
+  //   metal: [
+  //     "../media/sound/songs/metal/Slayer - Bloodline.mp3",
+  //     "../media/sound/songs/metal/SLAYER - WhenTheStillnessComes.mp3",
+  //     "../media/sound/songs/metal/Slayer Black Magic.mp3",
+  //   ],
+  //   rnb: [
+  //     "../media/sound/songs/rnb/Grateful.mp3",
+  //     "../media/sound/songs/rnb/SoulFly.mp3",
+  //     "../media/sound/songs/rnb/What You Did (feat Ella Mai).mp3",
+  //   ],
+  //   reggae: [
+  //     "../media/sound/songs/reggae/J Boog - Lets Do It Again.mp3",
+  //     "../media/sound/songs/reggae/Simple Love Song.mp3",
+  //     "../media/sound/songs/reggae/Wade In Your Water.mp3",
+  //   ],
+  //   soul: [
+  //     "../media/sound/songs/soul/A Day To Remember - Since youve Been Gone.mp3",
+  //     "../media/sound/songs/soul/I Never Loved a Man (The Way I Love You).mp3",
+  //     "../media/sound/songs/soul/Lets Stay Together.mp3",
+  //   ],
+  //   funk: [
+  //     "../media/sound/songs/funk/MC Luan Da BS - Quer Acabar Comigo.mp3",
+  //     "../media/sound/songs/funk/Funk_Song.mp3",
+  //     "../media/sound/songs/funk/Funk_Song.mp3",
+  //   ],
+  //   disco: [
+  //     "../media/sound/songs/disco/Glenn Frey - Lovers Moon.mp3",
+  //     "../media/sound/songs/disco/Simpleng Tao -Gloc 9.mp3",
+  //     "../media/sound/songs/disco/So Many Questions (Side A).mp3",
+  //   ],
+  //   spongecore: [
+  //     "../media/sound/songs/spongecore/spongecore_breakpants.mp3",
+  //     "../media/sound/songs/spongecore/Robot_krabs.mp3",
+  //     "../media/sound/songs/spongecore/Look_at_it.mp3",
+  //     "../media/sound/songs/spongecore/Imagination.mp3",
+  //     "../media/sound/songs/spongecore/Boating_school_blues.mp3",
+  //   ],
+  //   dnb: [
+  //     "../media/sound/songs/dnb/Brion Moore - Get Liff.mp3",
+  //     "../media/sound/songs/dnb/FIGHT! (PROD BRAHMAN).mp3",
+  //     "../media/sound/songs/dnb/You Lift Me Higher.mp3",
+  //   ],
+  //   funk_mtg: [
+  //     "../media/sound/songs/funk-mtg/MTG - PRIMEIRA DO ANO Ft MC GOMES BH-- [@djgb031] UDM.mp3",
+  //     "../media/sound/songs/funk-mtg/MTG - TU SENTANDO EU BOLADÃO (DJ AZIN & DJ NEGUIN).mp3",
+  //     "../media/sound/songs/funk-mtg/MTG PILOTO DE FUGA 001- DjLUIZCS(MCS - FABINOSKMC SACIMC G15MC BIANO DO IMPERA).mp3",
+  //   ],
+  // };
 
-  let songs = musicData[songArrayGenre];
-  console.log(songs);
-  let button = document.getElementById(buttonId);
+  // let songs = musicData[songArrayGenre];
+  // console.log(songs);
+  // let button = document.getElementById(buttonId);
   
-  let setList = {}; 
-  for (let track in songs) { // creates a setlist object with all the loaded songs from the given genre
-    setList[track] = songs[track];
-  }
-  console.log(setList);
+  // let setList = {}; 
+  // for (let track in songs) { // creates a setlist object with all the loaded songs from the given genre
+  //   setList[track] = songs[track];
+  // }
+  // console.log(setList);
 
-  let songNumber = Math.floor(Math.random() * songs.length); // picks a random song from the setlist
-  console.log(songNumber);
+  // let songNumber = Math.floor(Math.random() * songs.length); // picks a random song from the setlist
+  // console.log(songNumber);
 
-  let nextBtn = document.getElementById("next-btn");
-  nextBtn.onclick = function() {
-    songNumber++;
-    if (songNumber > songs.length - 1) {
-      songNumber = 0;
-    }
-  }
+  // let nextBtn = document.getElementById("next-btn");
+  // nextBtn.onclick = function() {
+  //   songNumber++;
+  //   if (songNumber > songs.length - 1) {
+  //     songNumber = 0;
+  //   }
+  // }
 
-  audio = new Audio(songs[songNumber]);
-  console.log(audio);
+  // audio = new Audio(songs[songNumber]);
+  // console.log(audio);
 
-  if (audio.paused) {
-    audio.play();
-    button.innerHTML = "II";
-    console.log("it's playing")
-  } else {
-    audio.pause();
-    button.innerHTML = songArrayGenre;
-    console.log("it's paused")
-  }
+  // if (audio.paused) {
+  //   audio.play();
+  //   button.innerHTML = "II";
+  //   console.log("it's playing")
+  // } else {
+  //   audio.pause();
+  //   button.innerHTML = songArrayGenre;
+  //   console.log("it's paused")
+  // }
 
 
   
@@ -256,24 +256,24 @@ function playSong(buttonId, songArrayGenre, genreTag) {
   // }
 
   //display current song file below                         ******This is fine it actually still works***&*&*&*&*
-  let songNameElement = document.getElementById("song-name");
+//   let songNameElement = document.getElementById("song-name");
 
-  audio.addEventListener("play", function () {
-    let songName = audio.src.slice(0, -4).split("/").pop();
-    songNameElement.textContent = songName;
-  });
+//   audio.addEventListener("play", function () {
+//     let songName = audio.src.slice(0, -4).split("/").pop();
+//     songNameElement.textContent = songName;
+//   });
 
-  // on play , changes background to moving gradient
-  audio.addEventListener("play", function changeBackground() {
-    let bckGround = document.getElementById("genre-list");
-    bckGround.className = "on-play";
-  });
+//   // on play , changes background to moving gradient
+//   audio.addEventListener("play", function changeBackground() {
+//     let bckGround = document.getElementById("genre-list");
+//     bckGround.className = "on-play";
+//   });
 
-  audio.addEventListener("pause", function revertBackground() {
-    let originalBckGround = document.getElementById("genre-list");
-    originalBckGround.classList.remove("on-play");
-  });
-}
+//   audio.addEventListener("pause", function revertBackground() {
+//     let originalBckGround = document.getElementById("genre-list");
+//     originalBckGround.classList.remove("on-play");
+//   });
+// }
 
 // #####################################--- Play rock song button function---###############################################
 
