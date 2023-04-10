@@ -39,11 +39,11 @@ let entry = document.getElementById("submit");
 entry.addEventListener("click", displayDetails);
 
 function displayDetails() {
-  let name = document.getElementById("name").value;
+  // let name = document.getElementById("name").value;
   let artist = document.getElementById("artist").value;
   let song = document.getElementById("song").value;
 
-  if (!name || !artist || !song) {
+  if (!artist || !song) {
     alert("Please fill in all fields");
     return;
   }
@@ -52,29 +52,61 @@ function displayDetails() {
 
   let newRow = display.insertRow(row);
 
-  let cell1 = newRow.insertCell(0);
-  let cell2 = newRow.insertCell(1);
-  let cell3 = newRow.insertCell(2);
+  // let cell1 = newRow.insertCell(0);
+  let cell2 = newRow.insertCell(0);
+  let cell3 = newRow.insertCell(1);
 
-  cell1.innerHTML = name;
+  // cell1.innerHTML = name;
   cell2.innerHTML = artist;
   cell3.innerHTML = song;
 
   row++;
-}
+  
+ 
+} 
+playlistForm.addEventListener("submit", function (event) {
+  let arr = [
+    "Love that song",
+    "I guess",
+    "interesting choice of music",
+    "You like this song?",
+    "This song is trash",
+    "Meh",
+    "I like this song",
+    "Exquisite taste in music",
+    "they're pretty good",
+    "hmmmm",
+
+  ];
+  let artist = document.getElementById("artist").value;
+  let song = document.getElementById("song").value;
+
+  let random = Math.floor((Math.random() * arr.length) % arr.length);
+  if (!artist || !song) {
+    return false;
+  } else {
+    alert(arr[random]);
+  };
+  
+});
 let input = document.getElementsByClassName("input").value;
 let form = document.getElementById("form");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
+  let artist = document.getElementById("artist").value;
+  let song = document.getElementById("song").value;
 
-  let audio = new Audio("../media/sound/sfx/vine_boomst.wav");
-  console.log(input);
-  if (input === "") {
+  if (!artist || !song) {
     return false;
   } else {
+    let audio = new Audio("../media/sound/sfx/vine_boomst.wav");
     audio.play();
-  }
+  };
+  
 });
+
+
+
 
 // #####################################-Start of Music Files play functions-###############################################
 
@@ -984,14 +1016,4 @@ function playFunkmtgSong() {
          add js function to better display song names instead of the path names
 */
 
-playlistForm.addEventListener("submit", function (event) {
-  let arr = [
-    "Love that song",
-    "I guess",
-    "interesting choice of music",
-    "You like this song?",
-    "This song is trash",
-  ];
-  let random = Math.floor((Math.random() * arr.length) % arr.length);
-  alert(arr[random]);
-});
+
