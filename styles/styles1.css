@@ -17,6 +17,7 @@ body {
   background: white;
   color: none;
   padding-bottom: 10vh;
+  transition:cubic-bezier(0.68, -0.55, 0.265, 1.55) .8s;
 }
 
 .night-mode {
@@ -156,11 +157,11 @@ body {
   margin-bottom: 10px;
 }
 
-#headline {
+/* .card p {
   font-size: 16px;
   line-height: 1.4;
   color: #666;
-}
+} */
 
 #headline-div {
   display: flex;
@@ -248,7 +249,7 @@ body {
   justify-content: center;
 }
 
-#night-mode-moon {
+#night-mode-icon {
   width: 60px;
   height: 60px;
   position: absolute;
@@ -257,3 +258,18 @@ body {
   cursor: pointer;
 
 }
+
+#night-mode-icon:hover {
+  width: 61px;
+  height: 61px;
+}
+
+.night-mode {
+  background-color: #3e3737;
+  color: #ffffff;
+}
+
+.night-mode-txt {
+  color: #ffffff!important;
+}
+

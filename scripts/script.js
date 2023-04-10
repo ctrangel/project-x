@@ -12,10 +12,24 @@ function toggleSidebar() {
 
 function nightMode() {
   let nightMode = document.getElementById("night-mode-btn");
-  let body = document.getElementsByTagName("body");
+  let body = document.getElementById("body");
+  let icon = document.getElementById("night-mode-icon");
+  
 
+  // if (text.style.color !== "white") {
+  //   text.style.color = "white";
+  // } else {
+  //   text.style.color = "#666";
+  // }
+  
   nightMode.classList.toggle("night-mode");
   body.classList.toggle("night-mode");
+  if (icon.src.includes("https://www.freeiconspng.com/uploads/crescent-moon-png-21.png")) {
+    icon.src = "https://cdn4.iconfinder.com/data/icons/biticon-weather-line/24/weather_sun_sunny_day-512.png";
+  } else {
+    icon.src = "https://www.freeiconspng.com/uploads/crescent-moon-png-21.png";
+  }
+
 }
 
 // #####################################playlist organizer script ###############################################
